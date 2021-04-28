@@ -8,7 +8,7 @@ app.use(express.json()); //Peticiones con formato application/json
 app.use(express.urlencoded({extended: true}));
 
 app.set("view engine","pug");
-const PORT = 5000;
+const PORT = 3000;
 
 app.get("/",(req,res)=>{
     res.render("index");
