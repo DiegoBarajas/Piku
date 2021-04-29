@@ -1,12 +1,12 @@
 {
-  "name": "proyecto",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "Piku",
+  "version": "Alpha 0.1",
+  "description": "Piku es una plataforma para que los niños puedan utilizar en la escuela, que es simple de usar y hecha para niños a nivel primaria",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Perla Moran, Diego Barajas, Nefertari Garcia, Armando Guzman Y Lizeth Velazquez",
   "license": "ISC",
   "dependencies": {
     "@cloudant/cloudant": "^4.3.1",
