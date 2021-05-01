@@ -118,13 +118,71 @@ app.post("/new_user",(req,res)=>{
 });
 
 
-//------------------------- USUARIO -------------------------\\
-app.post("/user",(req,res)=>{
-    res.send("User");
-    console.log("Email: "+req.body.email);
-    console.log("Password: "+req.body.password);
+//------------------------- USUARIO ALUMNO-------------------------\\
+app.post("/user_al",(req,res)=>{
+
+    cloudant();
+        async function cloudant(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+        console.log("Conexion creada");
+                console.log("Obteniendo DB");
+                const db = cloudant.db.use("piku_alumn");
+                let user="";
+                user= await db.get(req.body.email);
+                console.log("DB Obtenida");
+                console.log(user);
+            res.render("user_al",{name: user.name});
+            }catch(err){
+                console.log(err);
+                res.render("user_un");
+            }
+        }
+
 });
 
+//------------------------- USUARIO MAESTRO-------------------------\\
+app.post("/user_mt",(req,res)=>{
+
+    cloudant();
+        async function cloudant(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+        console.log("Conexion creada");
+                console.log("Obteniendo DB");
+                const db = cloudant.db.use("piku_mtrs");
+                let user="";
+                user= await db.get(req.body.email);
+                console.log("DB Obtenida");
+                console.log(user);
+                if(req.body.password == user.password){
+                    res.render("user_mt",{name: user.name});
+                }else if(req.body.password !== user.password){
+                    res.render("wrong_pass");
+                }
+            }catch(err){
+                console.log(err);
+                res.render("user_un");
+            }
+        }
+
+});
 app.listen(PORT,()=>{
     console.log("La app Piku ha iniciado en el puerto: " + PORT)
 });
