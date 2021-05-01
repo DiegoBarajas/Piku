@@ -1,0 +1,29 @@
+extend ./layout.pug
+block contenido 
+    h1 Crear Cuenta
+    div 
+        h3 Alumno
+    form(action="/new_user",method="POST")
+        div
+            label(for="name") Nombre:
+            input(type="text", name="name", placeholder="Nombre", id="name", required) 
+
+        div
+            label(for="lastname") Apellido:
+            input(type="text", name="lastname", placeholder="Apellido", id="lastname", required)
+
+        div
+            label(for="email") Correo o Numero de Telefono:
+            input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
+
+        div
+            label(for="birthday") Fecha de Nacimiento: 
+            input(type="date", name="birthday", placeholder="Fecha de Nacimiento ", id="birthday", required)
+
+        div 
+            input(type="submit", value="Iniciar Sesión")
+
+        div
+            a(href="/login_al") Ya tengo Cuenta
+        div
+        a(href="/") Volver al inicio

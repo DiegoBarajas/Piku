@@ -1,0 +1,16 @@
+extend ./layout.pug
+block contenido 
+    h1 Iniciar Sesion 
+    div
+        h3 Alumno
+    form(action="/user",method="POST")
+        div
+            label(for="email") Correo o Numero de Telefono:
+            input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
+        div 
+            input(type="submit", value="Iniciar Sesión")
+
+        div 
+            a(href="/signin_al") Crear una cuenta 
+        div 
+            a(href="/") Volver al inicio

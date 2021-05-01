@@ -1,0 +1,37 @@
+extend ./layout.pug
+block contenido  
+    h1 Crear Cuenta 
+    div
+        h3 Maestro
+    form(action="/new_user",method="POST")
+        div
+            label(for="name") Nombre:
+            input(type="text", name="name", placeholder="Nombre", id="name", required) 
+
+        div
+            label(for="lastname") Apellido:
+            input(type="text", name="lastname", placeholder="Apellido", id="lastname", required)
+
+        div
+            label(for="email") Correo o número de Telefono:
+            input(type="text", name="email", placeholder="Correo o número de telefono", id="email", required)
+
+        div
+            label(for="password") Contraseña:
+            input(type="password", name="password", placeholder="Contraseña", id="password", required)
+
+        div
+            label(for="password_c") Confirmar contraseña:
+            input(type="password", name="password_c", placeholder="Confirmar contraseña", id="password_c", required)
+
+        div
+            label(for="birthday") Fecha de Nacimiento: 
+            input(type="date", name="birthday", placeholder="Fecha de Nacimiento ", id="birthday", required)
+
+        div 
+            input(type="submit", value="Crear cuenta")
+
+        div
+            a(href="/login_al") Ya tengo Cuenta
+        div
+        a(href="/") Volver al inicio 

@@ -1,0 +1,20 @@
+extend ./layout.pug
+block contenido 
+    h1 Iniciar Sesion 
+    div
+        h3 Maestro
+    form(action="/user",method="POST")
+        div
+            label(for="email") Correo o Numero de Telefono:
+            input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
+        
+        div 
+            label(for="password") Contraseña: 
+            input(type="password", name="password", placeholder="Contraseña", id="password", required)
+        div 
+            input(type="submit", value="Iniciar Sesión")
+
+        div 
+            a(href="/signin_mt") Crear una cuenta 
+        div 
+            a(href="/") Volver al inicio 
