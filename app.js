@@ -26,7 +26,6 @@ app.get("/login_mt",(req,res)=>{
     res.render("login_mt");
 });
 
-
 //------------------------- CREAR CUENTA -------------------------\\
 app.get("/signin_al",(req,res)=>{
     res.render("signin_al");
@@ -64,7 +63,7 @@ app.post("/new_user",(req,res)=>{
                     "lastname":req.body.lastname,
                     "email" :req.body.email,
                     "birthday": req.body.birthday,
-                    "classcode":undefined, 
+                    "classcode":null, 
                     "pikoins":0
                 });
                 console.log("Documento Creado en piku_alumn");
@@ -100,7 +99,7 @@ app.post("/new_user",(req,res)=>{
                     "email" :req.body.email,
                     "password":req.body.password,
                     "birthday": req.body.birthday,
-                    "classcode":undefined, 
+                    "classcode":null, 
                     "pikoins":0
                 });
                 console.log("Documento Creado en piku_mtrs");
