@@ -27,12 +27,12 @@ app.get("/login_mt",(req,res)=>{
 });
 
 //------------------------- CREAR CUENTA -------------------------\\
-app.get("/signin_al",(req,res)=>{
-    res.render("signin_al");
+app.get("/signup_al",(req,res)=>{
+    res.render("signup_al");
 });
 
-app.get("/signin_mt",(req,res)=>{
-    res.render("signin_mt");
+app.get("/signup_mt",(req,res)=>{
+    res.render("signup_mt");
 });
 
 
