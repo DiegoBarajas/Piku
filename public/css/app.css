@@ -1,6 +1,33 @@
+/* CSS de index.pug */
 
+*{
+    box-sizing: border-box;
+}
 .inicio{
     text-align: center;
     font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
     color: #E67A86;
+    line-height: 300px;
 }
+
+.text{
+    text-align: center;
+}
+ .button, .button2{
+      margin: 50px 30px; 
+    padding: 25px 25px 25px 25px;
+    padding-top: 10px;
+    width: 150px;
+    height: 45px;
+    text-align: center;
+    text-decoration:none;
+} 
+a{
+    text-decoration: none;
+}
+/* CSS de login_al */
+h1{
+    text-align: center;
+}
+
+
