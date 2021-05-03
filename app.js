@@ -2,6 +2,7 @@ const express = require("express");
 const Cloudant = require ("@cloudant/cloudant");
 const session = require("express-session");
 const router_app = require("./routes");
+const sessions_middleware = require("./middlewares/session");
 const app = express();
 const PORT = 8080;
 
@@ -147,6 +148,12 @@ app.post("/user_al",(req,res)=>{
                 console.log("DB Obtenida");
                 console.log(user);
                 req.session.user_id = user._id
+                req.session.user_name = user.name
+                req.session.user_lastname = user.lastname
+                req.session.user_birthday = user.birthday
+                req.session.user_classcode = user.classcode
+                req.session.user_pikoins = user.pikoins
+
             res.redirect("/app");
             }catch(err){
                 console.log(err);
@@ -180,6 +187,11 @@ app.post("/user_mt",(req,res)=>{
                 console.log(user);
                 if(req.body.password == user.password){
                     req.session.user_id = user._id
+                    req.session.user_name = user.name
+                    req.session.user_lastname = user.lastname
+                    req.session.user_birthday = user.birthday
+                    req.session.user_classcode = user.classcode
+                    req.session.user_pikoins = user.pikoins
 
                     res.redirect("/app");
                 }else if(req.body.password !== user.password){
@@ -193,6 +205,7 @@ app.post("/user_mt",(req,res)=>{
 
 });
 
+app.use("/app",sessions_middleware);
 app.use("/app",router_app);
 
 app.listen(PORT,()=>{
