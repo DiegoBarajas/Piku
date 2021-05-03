@@ -1,6 +1,7 @@
 const express = require("express");
 const Cloudant = require ("@cloudant/cloudant");
 const session = require("express-session");
+const router_app = require("./routes");
 const app = express();
 const PORT = 8080;
 
@@ -146,9 +147,7 @@ app.post("/user_al",(req,res)=>{
                 console.log("DB Obtenida");
                 console.log(user);
                 req.session.user_id = user._id
-
-                console.log(req.session.user_id);
-            res.render("user_al",{name: user.name});
+            res.redirect("/app");
             }catch(err){
                 console.log(err);
                 res.render("user_un");
@@ -181,9 +180,8 @@ app.post("/user_mt",(req,res)=>{
                 console.log(user);
                 if(req.body.password == user.password){
                     req.session.user_id = user._id
-                    res.render("user_mt",{name: user.name});
-                    
-                    console.log(req.session.user_id);
+
+                    res.redirect("/app");
                 }else if(req.body.password !== user.password){
                     res.render("wrong_pass");
                 }
@@ -194,6 +192,9 @@ app.post("/user_mt",(req,res)=>{
         }
 
 });
+
+app.use("/app",router_app);
+
 app.listen(PORT,()=>{
     console.log("La app Piku ha iniciado en el puerto: " + PORT)
 });
