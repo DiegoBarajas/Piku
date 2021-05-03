@@ -147,12 +147,12 @@ app.post("/user_al",(req,res)=>{
                 user= await db.get(req.body.email);
                 console.log("DB Obtenida");
                 console.log(user);
-                req.session.user_id = user._id
-                req.session.user_name = user.name
-                req.session.user_lastname = user.lastname
-                req.session.user_birthday = user.birthday
-                req.session.user_classcode = user.classcode
-                req.session.user_pikoins = user.pikoins
+                req.session.user_id = user._id;
+                req.session.user_name = user.name;
+                req.session.user_lastname = user.lastname;
+                req.session.user_birthday = user.birthday;
+                req.session.user_classcode = user.classcode;
+                req.session.user_pikoins = user.pikoins;
 
             res.redirect("/app");
             }catch(err){
@@ -186,12 +186,12 @@ app.post("/user_mt",(req,res)=>{
                 console.log("DB Obtenida");
                 console.log(user);
                 if(req.body.password == user.password){
-                    req.session.user_id = user._id
-                    req.session.user_name = user.name
-                    req.session.user_lastname = user.lastname
-                    req.session.user_birthday = user.birthday
-                    req.session.user_classcode = user.classcode
-                    req.session.user_pikoins = user.pikoins
+                    req.session.user_id = user._id;
+                    req.session.user_name = user.name;
+                    req.session.user_lastname = user.lastname;
+                    req.session.user_birthday = user.birthday;
+                    req.session.user_classcode = user.classcode;
+                    req.session.user_pikoins = user.pikoins;
 
                     res.redirect("/app");
                 }else if(req.body.password !== user.password){
@@ -202,8 +202,17 @@ app.post("/user_mt",(req,res)=>{
                 res.render("user_un");
             }
         }
-
 });
+
+app.get("/logout",(req,res)=>{
+    req.session.user_id = undefined;
+    req.session.user_name = undefined;
+    req.session.user_lastname = undefined;
+    req.session.user_birthday = undefined;
+    req.session.user_classcode = undefined;
+    req.session.user_pikoins = undefined;
+    res.redirect("/");
+})
 
 app.use("/app",sessions_middleware);
 app.use("/app",router_app);
