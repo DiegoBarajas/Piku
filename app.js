@@ -1,5 +1,6 @@
 const express = require("express");
 const Cloudant = require ("@cloudant/cloudant");
+const session = require("express-session");
 const app = express();
 const PORT = 8080;
 
@@ -7,6 +8,11 @@ app.use("/public",express.static("public"));
 
 app.use(express.json()); //Peticiones con formato application/json
 app.use(express.urlencoded({extended: true}));
+app.use(session({
+    secret: "d3e8b20v04k12g6we8megdf4",
+    resave: false,
+    saveUninitialized: false
+}));
 
 app.set("view engine","pug");
 
@@ -139,6 +145,9 @@ app.post("/user_al",(req,res)=>{
                 user= await db.get(req.body.email);
                 console.log("DB Obtenida");
                 console.log(user);
+                req.session.user_id = user._id
+
+                console.log(req.session.user_id);
             res.render("user_al",{name: user.name});
             }catch(err){
                 console.log(err);
@@ -171,7 +180,10 @@ app.post("/user_mt",(req,res)=>{
                 console.log("DB Obtenida");
                 console.log(user);
                 if(req.body.password == user.password){
+                    req.session.user_id = user._id
                     res.render("user_mt",{name: user.name});
+                    
+                    console.log(req.session.user_id);
                 }else if(req.body.password !== user.password){
                     res.render("wrong_pass");
                 }
