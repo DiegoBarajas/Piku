@@ -3,27 +3,29 @@ block contenido
     h1 Crear Cuenta
     div 
         h3 Alumno
-    form(action="/new_user",method="POST")
-        div
+    form(action="/new_user",method="POST", id="formulario")
+        div(class="formulario-signup_al", id="name")
             label(for="name") Nombre:
-            input(type="text", name="name", placeholder="Nombre", id="name", required) 
+            input(type="text", name="name", placeholder="Nombre", id="name", required, class="formulario-input") 
 
         div
             label(for="lastname") Apellido:
             input(type="text", name="lastname", placeholder="Apellido", id="lastname", required)
 
-        div
-            label(for="email") Correo o Numero de Telefono:
-            input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
+        div(class="email" id="email")
+            label(for="email")  Correo o Número de teléfono:
+            input(type="text", name="email", placeholder="Correo o Número de teléfono", id="email", required)
 
         div
             label(for="birthday") Fecha de Nacimiento: 
             input(type="date", name="birthday", placeholder="Fecha de Nacimiento ", id="birthday", required)
 
         div 
-            input(type="submit", value="Iniciar Sesión")
+            input(type="submit", value="Crear Cuenta")
 
         div
             a(href="/login_al") Ya tengo Cuenta
         div
-        a(href="/") Volver al inicio
+        a(href="/") Volver al inicio 
+          
+    script(src="alumnos.js") 

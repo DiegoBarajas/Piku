@@ -1,12 +1,12 @@
 extend ./layout.pug
 block contenido 
-    h1 Iniciar Sesion 
+    h1 Iniciar Sesión 
     div
         h3 Alumno
     form(action="/user_al",method="POST")
         div
-            label(for="email") Correo o Numero de Telefono:
-            input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
+            label(for="email") Correo o Número de Teléfono:
+            input(type="text", name="email", placeholder="Correo o Numero de Teléfono", id="email", required)
         div 
             input(type="submit", value="Iniciar Sesión")
 
