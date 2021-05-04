@@ -64,7 +64,7 @@ app.post("/new_user",(req,res)=>{
                 });
                 console.log("Conexion con Base de Datos creada");
 
-                const piku_users = cloudant.db.use("piku_alumn");
+                const piku_users = cloudant.db.use("piku_users");
                 new_user = await piku_users.insert({"_id":req.body.email,
                     "usertype": "alumno",
                     "name":req.body.name,
@@ -74,7 +74,7 @@ app.post("/new_user",(req,res)=>{
                     "classcode":null, 
                     "pikoins":0
                 });
-                console.log("Documento Creado en piku_alumn");
+                console.log("Documento Creado en piku_users");
 
                 res.render("new_user_al");
             }catch(err){
@@ -99,7 +99,7 @@ app.post("/new_user",(req,res)=>{
                 });
                 console.log("Conexion con Base de Datos creada");
 
-                const piku_users = cloudant.db.use("piku_mtrs");
+                const piku_users = cloudant.db.use("piku_users");
                 new_user = await piku_users.insert({"_id":req.body.email,
                     "usertype": "maestro",
                     "name":req.body.name,
@@ -110,7 +110,7 @@ app.post("/new_user",(req,res)=>{
                     "classcode":null, 
                     "pikoins":0
                 });
-                console.log("Documento Creado en piku_mtrs");
+                console.log("Documento Creado en piku_users");
 
                 res.render("new_user_mt");
             }catch(err){
@@ -127,7 +127,6 @@ app.post("/new_user",(req,res)=>{
 
 //------------------------- USUARIO ALUMNO-------------------------\\
 app.post("/user_al",(req,res)=>{
-
     cloudant();
         async function cloudant(){
             try {
@@ -142,7 +141,7 @@ app.post("/user_al",(req,res)=>{
                 });
         console.log("Conexion creada");
                 console.log("Obteniendo DB");
-                const db = cloudant.db.use("piku_alumn");
+                const db = cloudant.db.use("piku_users");
                 let user="";
                 user= await db.get(req.body.email);
                 console.log("DB Obtenida");
@@ -153,8 +152,11 @@ app.post("/user_al",(req,res)=>{
                 req.session.user_birthday = user.birthday;
                 req.session.user_classcode = user.classcode;
                 req.session.user_pikoins = user.pikoins;
-
-            res.redirect("/app");
+                if(user.usertype == "alumno"){
+                    res.redirect("/app");
+                }else if(user.usertype == "maestro"){
+                    res.redirect("/login_mt");
+                }
             }catch(err){
                 console.log(err);
                 res.render("user_un");
@@ -180,7 +182,7 @@ app.post("/user_mt",(req,res)=>{
                 });
         console.log("Conexion creada");
                 console.log("Obteniendo DB");
-                const db = cloudant.db.use("piku_mtrs");
+                const db = cloudant.db.use("piku_users");
                 let user="";
                 user= await db.get(req.body.email);
                 console.log("DB Obtenida");
