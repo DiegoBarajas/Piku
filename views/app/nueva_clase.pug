@@ -1,33 +1,29 @@
 extend ../layout.pug  
 block contenido 
   h1 Nueva Clase 
-   div 
-      
-     form(action="/app/nueva_clase", method="POST")
-        div  
-          label(for="nombre de la clase") Nombre de la Clase:
-          input(type="text", name="nombre de la clase", placeholder="Nombre de la clase", id="nombre de la clase", required)
-
-        div
-          label(for="descripción") Descripción de la clase:
-          input(type="text", name="Descripción de la clase", placeholder="Descripción de la clase" id="descripción")
-        div 
-          label(for="grado") Grado: 
-          input(type="text", name="Grado", placeholder="Grado", id="grado", required)
-        div 
-          label(for="grupo") Grupo: 
-          input(type="text", name="Grupo", placeholder="Grupo", id="grupo", required)
-        div 
-          label(for="turno") Turno:
-          input(type="text", name="Turno", placeholder="Turno", id="turno", required) 
-        div 
-          label(for="escuela") Escuela: 
-          input(type="text", name="Escuela", placeholder="Nombre de la Escuela" id="escuela", required) 
-        
-        div 
-         input(type="submit", value="Crear Clase")
-
-        div 
-         a(href="/app") 
+  div 
+    form(action="/app/nueva_clase", method="POST")
+      div  
+        label(for="classname") Nombre de la Clase:
+        input(type="text", name="classname", placeholder="Nombre de la clase", id="classname", required)
+      div
+        label(for="description") Descripción de la clase(Opcional):
+        input(type="text", name="description", placeholder="Descripción de la clase" id="description")
+      div 
+        label(for="grade") Grado: 
+        input(type="number", name="grade", placeholder="Grado", id="grade", required)
+      div 
+        label(for="group") Grupo: 
+        input(type="text", name="group", placeholder="Grupo", id="group", required)
+      div 
+        label(for="turn") Turno:
+        input(type="text", name="turn", placeholder="Turno", id="turn", required) 
+      div 
+        label(for="school") Escuela: 
+        input(type="text", name="school", placeholder="Nombre de la Escuela" id="school", required)     
+      div 
+        input(type="submit", value="Crear Clase")
+      div 
+        a(href="/app") Cancelar
 
     
