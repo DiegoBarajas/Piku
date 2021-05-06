@@ -2,6 +2,8 @@
 
 *{
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 .inicio{
     text-align: center;
@@ -29,5 +31,50 @@ a{
 h1{
     text-align: center;
 }
+/* CSS de index_al */
+header{
+    background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
+    width: 100%;
+    height: 80px;
+	padding: 0px;
+	text-decoration: none;
+	font-size: 15px;
+}
 
+.button_S{
+    margin-right: 323px;
+}
+.Crear_Clase{
+    margin-right: 323px;
+}
+.button_M_U{
+    margin-right: 0px;
+}
+.button_Mi{
+    margin-right: 322px;
+   }
+.block{
+    width: 240px;
+    height: 340px;
+    margin-left: 1125px;
+    margin-right: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-image: linear-gradient(to right,#FCAE79,#E67A86); 
 
+}
+
+.block2{
+    text-align: center;
+    width: 540px;
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+}
