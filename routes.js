@@ -22,7 +22,12 @@ router.get("/crear_clase",(req,res)=>{
     if(req.session.user_type == "alumno"){
         res.redirect("/app");
     }else if(req.session.user_type == "maestro"){
-        res.render("app/nueva_clase");
+        if(req.session.user_classcode == null){
+            res.render("app/nueva_clase");
+        }else if(req.session.user_classcode !== null){
+            res.redirect("/app");
+        }
+        
 }
 });
 
@@ -40,8 +45,8 @@ router.post("/nueva_clase",(req,res)=>{
         rn5 = Math.round(rn5*10);
     }while(rn1 === 10 || rn2 === 10 || rn3 === 10 || rn4 === 10 || rn5 === 10 || rn1 === 0 || rn2 === 0 || rn3 === 0 || rn4 === 0 || rn5 === 0);
     classcode = ""+rn1+rn2+rn3+rn4+rn5+"";
-    cloudant();
-    async function cloudant(){
+    cloudant_cl();
+    async function cloudant_cl(){
         try{
             console.log("Creando Conexion con la Base de Datos.....");
             const cloudant = Cloudant({
@@ -63,7 +68,36 @@ router.post("/nueva_clase",(req,res)=>{
                 "school":req.body.school
             });
             console.log("Documento Creado en piku_clases");
-            res.send("Nueva clase");
+            cloudant_cle();
+                async function cloudant_cle(){
+                    try {
+                        console.log("Creando conexion con base de datos....");
+                        const cloudant = Cloudant({
+                            url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                            plugins:{
+                                iamauth:{
+                                    iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                                }
+                            }
+                        });
+                        console.log("Conexion creada");
+
+                        const db = cloudant.db.use("piku_users");
+                        console.log("Obteniendo documento de las Base de datos");
+                        r = await db.get(req.session.user_id);
+                
+                        doc_ed = r;
+                        doc_ed["_rev"]=r._rev
+                        doc_ed.classcode = classcode;
+                        r = await db.insert(doc_ed);
+                        console.log("Documento editado")
+                        
+                        res.render("app/clase_creada");
+                    }catch(err){
+                        console.log(err);
+                        res.send("Ha ocurrdo un error, intenta de nuevo por favor");
+                    }
+            }
         }catch(err){
             console.error(err);
             do{
@@ -80,8 +114,8 @@ router.post("/nueva_clase",(req,res)=>{
             }while(rn1 === 10 || rn2 === 10 || rn3 === 10 || rn4 === 10 || rn5 === 10 || rn1 === 0 || rn2 === 0 || rn3 === 0 || rn4 === 0 || rn5 === 0);
             classcode = ""+rn1+rn2+rn3+rn4+rn5+"";  
             
-            cloudant();
-            async function cloudant(){
+            cloudant_cl();
+            async function cloudant_cl(){
                 try{
                     console.log("Creando Conexion con la Base de Datos.....");
                     const cloudant = Cloudant({
@@ -104,6 +138,37 @@ router.post("/nueva_clase",(req,res)=>{
                     });
                     console.log("Documento Creado en piku_clases");
                     res.send("Nueva clase");
+                        cloudant_cle();
+                        async function cloudant_cle(){
+                            try {
+                                console.log("Creando conexion con base de datos....");
+                                const cloudant = Cloudant({
+                                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                                    plugins:{
+                                        iamauth:{
+                                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                                        }
+                                    }
+                                });
+                                console.log("Conexion creada");
+
+                                const db = cloudant.db.use("piku_users");
+                                console.log("Obteniendo documento de las Base de datos");
+                                r = await db.get(req.session.user_id);
+                                console.log(r);
+                        
+                                doc_ed = r;
+                                doc_ed["_rev"]=r._rev
+                                doc_ed.classcode = classcode;
+                                r = await db.insert(doc_ed);
+                                console.log("Documento editado")
+                        
+                                res.render("app/clase_creada");
+                            }catch(err){
+                                console.log(err);
+                                res.send("Ha ocurrdo un error, intenta de nuevo por favor");
+                            }
+                    }
                 }catch(err){
                     console.error(err);
                     res.send("Ha ocurrdo un error, intenta de nuevo por favor");
