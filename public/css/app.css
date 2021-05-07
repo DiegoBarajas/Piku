@@ -4,6 +4,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration:none;
 }
 .inicio{
     text-align: center;
@@ -16,13 +17,16 @@
     text-align: center;
 }
  .button, .button2{
-      margin: 50px 30px; 
+    margin: 50px 20px; 
     padding: 25px 25px 25px 25px;
     padding-top: 10px;
     width: 150px;
-    height: 45px;
+    height: 60px;
     text-align: center;
-    text-decoration:none;
+    font-size: 20px;
+    color: #D079FC;
+    border:0px solid ;
+    font-weight: bold;
 } 
 a{
     text-decoration: none;
