@@ -209,12 +209,21 @@ app.post("/user_mt",(req,res)=>{
 });
 
 app.get("/logout",(req,res)=>{
+//----------User-----------
     req.session.user_id = undefined;
     req.session.user_name = undefined;
     req.session.user_lastname = undefined;
     req.session.user_birthday = undefined;
     req.session.user_classcode = undefined;
     req.session.user_pikoins = undefined;
+//----------CLass-----------
+    req.session.class_id = undefined;
+    req.session.class_classname = undefined;
+    req.session.class_description = undefined;
+    req.session.class_grade = undefined;
+    req.session.class_group = undefined;
+    req.session.class_turn = undefined;
+    req.session.class_school = undefined;
     res.redirect("/");
 })
 
