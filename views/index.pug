@@ -1,9 +1,10 @@
 extend ./layout.pug
 block contenido
   h1(id="h1" class="inicio") #[big Bienvenido a piku]
-  img(src="../css/resources/piku_logo.png", alt="Logo Piku")
+  div
+     img(class="img" src="../public/resources/piku_logo.png", alt="Logo de piku")
   div(class="text") 
-    button(class="button")
+    button(class="button1")
       a(href="/login_al") Soy Alumno 
-    button(class="button")
+    button(class="button2")
       a(href="/login_mt") Soy Maestro 
