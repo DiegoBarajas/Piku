@@ -1,9 +1,9 @@
 extend ./layout.pug
 block contenido 
     h1 Crear Cuenta
-    div 
+    div #[class="alumno-cajas"]
         h3 Alumno
-    form(action="/new_user",method="POST", id="formulario")
+       form(action="/new_user",method="POST", id="formulario")
         div(class="formulario-signup_al", id="name")
             label(for="name") Nombre:
             input(type="text", name="name", placeholder="Nombre", id="name", required, class="formulario-input") 
@@ -27,4 +27,6 @@ block contenido
             a(href="/login_al") Ya tengo Cuenta
         div
         a(href="/") Volver al inicio 
+
+
            
