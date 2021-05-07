@@ -10,24 +10,58 @@
     text-align: center;
     font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
     color: #E67A86;
-    line-height: 300px;
+    line-height: 200px;
+    font-size: 50px;
 }
+
 
 .text{
     text-align: center;
 }
- .button, .button2{
-    margin: 50px 20px; 
+  .button1{
+    margin: 50px 50px; 
     padding: 25px 25px 25px 25px;
     padding-top: 10px;
-    width: 150px;
+    width: 130px;
     height: 60px;
     text-align: center;
     font-size: 20px;
-    color: #D079FC;
     border:0px solid ;
     font-weight: bold;
+    color:#D079FC ;
+    border-radius: 10%;
 } 
+
+   .button2{
+    margin: 50px 50px; 
+    padding: 25px 25px 25px 25px;
+    padding-top: 10px;
+    width: 130px;
+    height: 60px;
+    text-align: center;
+    font-size: 20px;
+    border:0px solid ;
+    font-weight: bold;
+    color:#D079FC ;
+    border-radius: 10%;
+} 
+
+
+.img{
+    width: 300px;
+    height: 300px;
+    display:block;
+    margin:auto;
+    padding: 8px 1px 10px 10px;
+    border-radius: 10%;
+    
+ }
+
+ body{
+     background-color: #ECECEC;
+ }
+
+
 a{
     text-decoration: none;
 }
@@ -82,3 +116,11 @@ header{
     border-radius: 50px;
     border-style: hidden;
 }
+
+ .alumno-cajas{
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 400; 
+    color: black; 
+    background:#ee0467;
+ }
