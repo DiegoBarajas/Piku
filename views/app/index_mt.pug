@@ -19,11 +19,11 @@ block contenido
       div
          h3 #[a(href="/app/crear_clase") Crear clase]
       div 
+         h3 Unirme a una clase   
          form(action="/app/entrar_clase",method="POST")
-         div
-            h3 Unirme a una clase   
-            label(for="cod") Codigo de Clase:
-            input(type="number", name="cod", placeholder="Codigo de Clase", id="cod", required)
+            div
+               label(for="cod") Codigo de Clase:
+               input(type="number", name="cod", placeholder="Codigo de Clase", id="cod", required)
             div 
                input(type="submit", value="Unirme a Clase")
    -}else if(classcode !== null){
