@@ -8,11 +8,6 @@ block contenido
                   path(d="M11.46.146A.5.5 0 0 0 11.107 0H4.893a.5.5 0 0 0-.353.146L.146 4.54A.5.5 0 0 0 0 4.893v6.214a.5.5 0 0 0 .146.353l4.394 4.394a.5.5 0 0 0 .353.146h6.214a.5.5 0 0 0 .353-.146l4.394-4.394a.5.5 0 0 0 .146-.353V4.893a.5.5 0 0 0-.146-.353L11.46.146zM8 4c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995A.905.905 0 0 1 8 4zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z")
                a(href="/logout") Cerrar sesión
        
-            button(type="button" class="button_Mi")
-               svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-bi-columns-gap" viewBox="0 0 16 16")
-                  path(d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z")
-               a(href="/app/clase") Mi clase  
-      
             button(type="button", class="button_M_U")
                svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16")
                   path(d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z")
@@ -21,7 +16,16 @@ block contenido
    div
    h1 Hola #{name}, Bienvenido 
    -if(classcode == null){
-      a(href="/app/crear_clase") Crear clase
+      div
+         h3 #[a(href="/app/crear_clase") Crear clase]
+      div 
+         form(action="/app/entrar_clase",method="POST")
+         div
+            h3 Unirme a una clase   
+            label(for="cod") Codigo de Clase:
+            input(type="number", name="cod", placeholder="Codigo de Clase", id="cod", required)
+            div 
+               input(type="submit", value="Unirme a Clase")
    -}else if(classcode !== null){
-      a(href="/app/clase") Mi Clase 
+      h2 #[a(href="/app/clase") Mi Clase] 
    -}
