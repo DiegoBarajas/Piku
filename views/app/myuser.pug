@@ -14,12 +14,11 @@ block contenido
           a(href="/app/clase") Mi clase
 
     div(class="block")
-      h3 Nombre: #{name} #{lastname}
-      h3 Tipo de Usuario: #{usertype}
-      h3 Correo: #{email}
-      h3 Codigo de clase: #{classcode}
-      h3 Pikoins: #{pikoins}
+      p #[h3 Nombre:] #{name} #{lastname}
+      p #[h3 Tipo de Usuario:] #{usertype.toUpperCase()}
+      p #[h3 Correo:] #{email}
+      -if(classcode == null){classcode = "Sin Clase"}
+      p #[h3 Codigo de clase:] #{classcode}
+      p #[h3 Pikoins:] #{pikoins}
       div 
         a(href="/app") Volver 
-      div
-        a(href="/logout") Cerrar sesion 
