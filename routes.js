@@ -178,7 +178,68 @@ router.post("/nueva_clase",(req,res)=>{
     }
 });
 
+router.post("/entrar_clase",(req,res)=>{
+    cloudant_rc();
+    async function cloudant_rc(){
+        try {
+            console.log("Creando conexion con base de datos....");
+            const cloudant = Cloudant({
+                url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                plugins:{
+                    iamauth:{
+                        iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                    }
+                }
+            });
+            console.log("Conexion creada");
+            const db = cloudant.db.use("piku_clases");
+
+            console.log("Obteniendo documento de las Base de datos");
+            r3 = await db.get(req.body.cod);
+            console.log(r3);
+            
+            cloudant_ac();
+            async function cloudant_ac(){
+                try{
+                    console.log("Creando conexion con base de datos....");
+                    const cloudant = Cloudant({
+                        url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                        plugins:{
+                            iamauth:{
+                                iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                            }
+                        }
+                    });
+                    console.log("Conexion creada");
+
+                    const db = cloudant.db.use("piku_users");
+                    console.log("Obteniendo documento de las Base de datos");
+                    r2 = await db.get(req.session.user_id);
+                    console.log(res);
+
+                    doc_ed = r2;
+                    doc_ed["_rev"]=r2._rev
+                    doc_ed.classcode = req.body.cod;
+                    r2 = await db.insert(doc_ed);
+                    console.log("Documento editado: ")
+                    console.log(r2);
+                    res.redirect("/app/clase");
+                }catch(err){
+                    console.log("Error: " + err);
+                    res.send("Ha ocurrido un error");
+                }
+            }
+        }catch(err){
+            console.log(err);
+            res.send("Esa clase no existe")
+        } 
+    }
+});
+
 router.use("/clase", clases_middleware);
 router.use("/clase", router_class);
 
 module.exports = router;
+
+
+            
