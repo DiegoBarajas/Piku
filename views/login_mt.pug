@@ -4,15 +4,16 @@ block contenido
     div
         h3(class="titulo_login_mt") Maestro
     div
-        img(class="img-login-al" src="../public/resources/Logo_piku.png", alt="Logo de piku")
-    form(action="/user_mt",method="POST")
-        div(class="corr_num")
+         img(class="img-login-al" src="../public/resources/Logo_piku.png", alt="Logo de piku")
+    form(action="/user_mt",method="POST" class="HAHAHA")
+        div(id="XXD", class="corr_num")
             label(for="email") Correo o Número de Teléfono: 
             input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
         
         div(class="contraseña") 
             label(for="password") Contraseña: 
             input(type="password", name="password", placeholder="Contraseña", id="password", required)
+
         div(class="in-sesi")  
             input(type="submit", value="Iniciar Sesión")
 

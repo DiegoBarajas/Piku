@@ -5,7 +5,6 @@
     margin: 0;
     padding: 0;
     text-decoration:none;
-    background-color: whitesmoke;
 }
 .inicio{
     text-align: center;
@@ -49,12 +48,12 @@
 
 
 .img{
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     display:block;
     margin:auto;
     padding: 8px 1px 10px 10px;
-    border-radius: 40%;
+    border-radius: 10%;
     
  }
 
@@ -134,38 +133,55 @@ header{
     display: inline-block;
  }
 
- .corr_num {
+ div#XXD.corr_num {
      color: #D079FC;
-     text-align: 10px 50px 30px 100px;
+     /* text-align: 10px 50px 30px 100px; */
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-     margin: 0px 50px 50px 600px;
- }
+     margin-bottom: 20px;
+ } 
+.HAHAHA{
+    text-align: center;
+    width: 540px;
+    height: 340px;
+    /* margin-left: auto;
+    margin-right: auto; */
+    float: right;
+    margin-right: 200px;
+    padding: 70px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+}
 
- .in-sesi {
+
+  div.in-sesi {
     color: #D079FC;
-    text-align: 10px 50px 30px 100px;
+    /* text-align: 10px 50px 30px 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0px 50px 50px 750px;
- }
+    /* margin: 0px 50px 50px 750px; */
+ } 
 
- .crear-c{
+  div.crear-c{
         display: inline-block;
-        text-align: center;
+        /* text-align: center; */
         width: 150px;
         height: 60px;
         box-sizing:content-box;
-        margin-left: 600px;
+        /* margin-left: 600px;
         margin-right: 50px;
-        margin-bottom: 800px;
+        margin-bottom: 800px; */
         padding: 20px;
         box-sizing: border-box;
         border: 5px solid #333;
-        background-color: whitesmoke; 
+        background-color: red; 
         border-radius: 50px;
         border-style: hidden;
- }
+        margin-right: 20px;
+ }  
 
- .volver-i{
+  div.volver-i{
     text-align: center;
     width: 150px;
     height: 60px;
@@ -173,33 +189,29 @@ header{
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
-    border: 5px solid #333; 
+    border: 5px solid #333;
+    background-color: red; 
     border-radius: 50px;
     border-style: hidden;
     display: inline-block;
- }
+ } 
 /* Tambien esta en login.mt.pug */
- .img-login-al{
-    width: 480px;
-    height: 420px;
-    padding: 8px 1px 100px 100px;
+  .img-login-al{
+    width: 450px;
+    height: 450px; 
+    float: left;
+     padding: 8px 1px 100px 100px;
+  }
     /* border-radius: 20%; */
-    display: inline-block;
-    display:block;
- }
+    /* display: inline-block;
+    display:block; */ 
 
  /* login.mt.pug */
- .contraseña{
+  div.contraseña{
     color: #D079FC;
     /* text-align: 10px 50px 30px 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 0px 50px 50px 600px;
- }
+    /* margin: 0px 50px 50px 600px; */
+ }  
  
  /* signup_mt.pub */
-.cre-cue{
-    color: #D079FC;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    margin: 50px 0 0 80px;
-}
-
