@@ -21,6 +21,7 @@ block contenido
  div(class="block2") 
     form(action="/app/nueva_clase", method="POST")
       div  
+        h3 Clase:
         label(for="classname") Nombre de la Clase:
         input(type="text", name="classname", placeholder="Nombre de la clase", id="classname", required)
       div
@@ -37,10 +38,39 @@ block contenido
         input(type="text", name="turn", placeholder="Turno", id="turn", required) 
       div 
         label(for="school") Escuela: 
-        input(type="text", name="school", placeholder="Nombre de la Escuela" id="school", required)     
+        input(type="text", name="school", placeholder="Nombre de la Escuela" id="school", required)
+      div 
+        h3 Materias: 
+        label(for="subject1") Nombre de la materia: 
+        input(type="text", name="subject1", placeholder="Nombre de la materia", id="subject1", required)    
+      div 
+        label(for="subject2") Nombre de la materia: 
+        input(type="text", name="subject2", placeholder="Nombre de la materia", id="subject2")    
+      div 
+        label(for="subject3") Nombre de la materia: 
+        input(type="text", name="subject3", placeholder="Nombre de la materia", id="subject3")     
+      div 
+        label(for="subject4") Nombre de la materia: 
+        input(type="text", name="subject4", placeholder="Nombre de la materia", id="subject4")     
+      div 
+        label(for="subject5") Nombre de la materia: 
+        input(type="text", name="subject5", placeholder="Nombre de la materia", id="subject5")     
+      div 
+        label(for="subject6") Nombre de la materia: 
+        input(type="text", name="subject6", placeholder="Nombre de la materia", id="subject6")     
+      div 
+        label(for="subject7") Nombre de la materia: 
+        input(type="text", name="subject7", placeholder="Nombre de la materia", id="subject7")     
+      div 
+        label(for="subject8") Nombre de la materia: 
+        input(type="text", name="subject8", placeholder="Nombre de la materia", id="subject8")     
+      div 
+        label(for="subject9") Nombre de la materia: 
+        input(type="text", name="subject9", placeholder="Nombre de la materia", id="subject9")     
+      div 
+        label(for="subject10") Nombre de la materia: 
+        input(type="text", name="subject10", placeholder="Nombre de la materia", id="subject10") 
       div 
         input(type="submit", value="Crear Clase")
       div 
         a(href="/app") Cancelar
-
-    

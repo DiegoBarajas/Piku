@@ -100,7 +100,37 @@ router.post("/nueva_clase",(req,res)=>{
                 "grade" :req.body.grade,
                 "group": req.body.group,
                 "turn": req.body.turn,
-                "school":req.body.school
+                "school":req.body.school,
+                "subject1":{
+                    "subject_name": req.body.subject1
+                },
+                "subject2":{
+                    "subject_name": req.body.subject2
+                },
+                "subject3":{
+                    "subject_name": req.body.subject3
+                },
+                "subject4":{
+                    "subject_name": req.body.subject4
+                },
+                "subject5":{
+                    "subject_name": req.body.subject5
+                },
+                "subject6":{
+                    "subject_name": req.body.subject6
+                },
+                "subject7":{
+                    "subject_name": req.body.subject7
+                },
+                "subject8":{
+                    "subject_name": req.body.subject8
+                },
+                "subject9":{
+                    "subject_name": req.body.subject9
+                },
+                "subject10":{
+                    "subject_name": req.body.subject10
+                }
             });
             console.log("Documento Creado en piku_clases");
             cloudant_cle();
@@ -169,7 +199,37 @@ router.post("/nueva_clase",(req,res)=>{
                         "grade" :req.body.grade,
                         "group": req.body.group,
                         "turn": req.body.turn,
-                        "school":req.body.school
+                        "school":req.body.school,
+                        "subject1":{
+                            "subject_name": req.body.subject1
+                        },
+                        "subject2":{
+                            "subject_name": req.body.subject2
+                        },
+                        "subject3":{
+                            "subject_name": req.body.subject3
+                        },
+                        "subject4":{
+                            "subject_name": req.body.subject4
+                        },
+                        "subject5":{
+                            "subject_name": req.body.subject5
+                        },
+                        "subject6":{
+                            "subject_name": req.body.subject6
+                        },
+                        "subject7":{
+                            "subject_name": req.body.subject7
+                        },
+                        "subject8":{
+                            "subject_name": req.body.subject8
+                        },
+                        "subject9":{
+                            "subject_name": req.body.subject9
+                        },
+                        "subject10":{
+                            "subject_name": req.body.subject10
+                        }
                     });
                     console.log("Documento Creado en piku_clases");
                     res.send("Nueva clase");
