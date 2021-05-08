@@ -21,6 +21,9 @@ app.set("view engine","pug");
 
 //------------------------- INDEX -------------------------\\
 app.get("/",(req,res)=>{
+    if(req.session.user_id){
+        res.redirect("/app");
+    }else if(!req.session.user_id)
     res.render("index");
 });
 
