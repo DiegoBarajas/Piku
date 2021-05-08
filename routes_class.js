@@ -10,7 +10,7 @@ router.use(session({
     saveUninitialized: false
 }));
 
-
+//-------------------- /app/clase --------------------
 router.get("/",(req,res)=>{
     cloudant();
     async function cloudant(){
@@ -45,6 +45,7 @@ router.get("/",(req,res)=>{
     }       
 });
 
+//-------------------- Informacion de la clase --------------------
 router.get("/info",(req,res)=>{
     res.render("clase/info",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school});
 });

@@ -7,6 +7,7 @@ const router = express.Router();
 router.use(express.json())
 router.use(express.urlencoded({extended: true}));
 
+//-------------------- /App --------------------
 router.get("/",(req,res)=>{
 
     cloudant();
@@ -44,10 +45,13 @@ router.get("/",(req,res)=>{
         } 
     }
 });
+
+//-------------------- My User --------------------
 router.get("/myuser",(req,res)=>{
     res.render("app/myuser",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, usertype: req.session.user_type});
 });
 
+//-------------------- Crear una clase formulario --------------------
 router.get("/crear_clase",(req,res)=>{
     if(req.session.user_type == "alumno"){
         res.redirect("/app");
@@ -61,6 +65,7 @@ router.get("/crear_clase",(req,res)=>{
 }
 });
 
+//-------------------- Crear clase en DB --------------------
 router.post("/nueva_clase",(req,res)=>{
     do{
         var rn1 = Math.random();
@@ -208,6 +213,7 @@ router.post("/nueva_clase",(req,res)=>{
     }
 });
 
+//-------------------- Entrar a clase --------------------
 router.post("/entrar_clase",(req,res)=>{
     cloudant_rc();
     async function cloudant_rc(){

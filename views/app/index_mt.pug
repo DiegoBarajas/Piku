@@ -29,7 +29,7 @@ block contenido
    -}else if(classcode !== null){
       div
          h2 #[a(href="/app/clase") #{classname}]
-         h3 Codigo de clase: #{classcode}
-         h4 Grado: #{grade} || Grupo: #{group}
-         h4 Escuela: #{school}
+         p #[b Codigo de clase:] #{classcode}
+         p #[b Grado:] #{grade} || #[b Grupo:] #{group}
+         p #[b Escuela:] #{school}
    -}
