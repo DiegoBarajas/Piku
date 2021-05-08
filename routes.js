@@ -8,10 +8,40 @@ router.use(express.json())
 router.use(express.urlencoded({extended: true}));
 
 router.get("/",(req,res)=>{
-    if(req.session.user_type == "alumno"){
-        res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
-    }else if(req.session.user_type == "maestro"){
-        res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+
+    cloudant();
+    async function cloudant(){
+        try {
+            console.log("Creando conexion con base de datos....");
+            const cloudant = Cloudant({
+                url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                plugins:{
+                    iamauth:{
+                        iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                    }
+                }
+            });
+            console.log("Conexion creada");
+
+            const db = cloudant.db.use("piku_clases");
+
+            console.log("Obteniendo documento de las Base de datos");
+            r5 = await db.get(req.session.user_classcode);
+            console.log(r5.classcode);
+            
+            if(req.session.user_type == "alumno"){
+                res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school});
+            }else if(req.session.user_type == "maestro"){
+                res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school});
+            }
+
+        }catch(err){
+            if(req.session.user_type == "alumno"){
+                res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+            }else if(req.session.user_type == "maestro"){
+                res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+            }
+        } 
     }
 });
 router.get("/myuser",(req,res)=>{

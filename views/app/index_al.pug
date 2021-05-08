@@ -24,5 +24,9 @@ block contenido
          div 
             input(type="submit", value="Unirme a Clase")
    -}else if(classcode !== null){
-      a(href="/app/clase") Mi Clase
+      div
+         h2 #[a(href="/app/clase") #{classname}]
+         h3 Codigo de clase: #{classcode}
+         h4 Grado: #{grade} || Grupo: #{group}
+         h4 Escuela: #{school}
    -}
