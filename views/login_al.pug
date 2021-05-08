@@ -1,16 +1,18 @@
 extend ./layout.pug
 block contenido 
-    h1 Iniciar Sesión 
+    h1(class="inicio_al") Iniciar Sesión 
     div
-        h3 Alumno
+        h3(class="titulo_login_al") Alumno
+    div
+        img(class="img-login-al" src="../public/resources/piku_logo.png", alt="Logo de piku")
     form(action="/user_al",method="POST")
-        div
-            label(for="email") Correo o Número de Teléfono:
+        div(class="corr_num")
+            label(for="email") Correo o Número de Teléfono:       
             input(type="text", name="email", placeholder="Correo o Numero de Teléfono", id="email", required)
-        div 
+        div(class="in-sesi") 
             input(type="submit", value="Iniciar Sesión")
 
-        div 
+        div(class="crear-c")
             a(href="/signup_al") Crear una cuenta 
-        div 
+        div(class="volver-i") 
             a(href="/") Volver al inicio
