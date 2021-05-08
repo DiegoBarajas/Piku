@@ -1,8 +1,8 @@
 extend ./layout.pug
 block contenido  
-    h1 Crear Cuenta 
+    h1(class="cre-cue") Crear Cuenta 
     div
-        h3 Maestro
+        h3(class="titu-signup-mt") Maestro
     form(action="/new_user",method="POST")
         div
             label(for="name") Nombre:

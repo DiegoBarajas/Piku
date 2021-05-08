@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
     text-decoration:none;
+    background-color: whitesmoke;
 }
 .inicio{
     text-align: center;
@@ -48,12 +49,12 @@
 
 
 .img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     display:block;
     margin:auto;
     padding: 8px 1px 10px 10px;
-    border-radius: 10%;
+    border-radius: 40%;
     
  }
 
@@ -172,8 +173,7 @@ header{
     margin: auto;
     padding: 20px;
     box-sizing: border-box;
-    border: 5px solid #333;
-    background-color: whitesmoke; 
+    border: 5px solid #333; 
     border-radius: 50px;
     border-style: hidden;
     display: inline-block;
@@ -191,9 +191,15 @@ header{
  /* login.mt.pug */
  .contraseña{
     color: #D079FC;
-    text-align: 10px 50px 30px 100px;
+    /* text-align: 10px 50px 30px 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     margin: 0px 50px 50px 600px;
  }
  
  /* signup_mt.pub */
+.cre-cue{
+    color: #D079FC;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 50px 0 0 80px;
+}
+
