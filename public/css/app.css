@@ -65,10 +65,7 @@
 a{
     text-decoration: none;
 }
-/* CSS de login_al */
-h1{
-    text-align: center;
-}
+
 /* CSS de index_al */
 header{
     background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
@@ -117,10 +114,86 @@ header{
     border-style: hidden;
 }
 
- .alumno-cajas{
-    font-family: sans-serif; 
-    font-size: 18px; 
-    font-weight: 400; 
-    color: black; 
-    background:#ee0467;
+/* login_al.pug y algunas de login_mt.pug */
+
+ .inicio_al, .inicio_mt{
+    text-align:left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    font-size: 30px;
+    color:#E67A86 ;
+    margin: 50px 0 20px 50px;
  }
+
+.titulo_login_al, .titulo_login_mt{
+    color: #D079FC;
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 8px 1px 9px 700px;
+    display: inline-block;
+ }
+
+ .corr_num {
+     color: #D079FC;
+     text-align: 10px 50px 30px 100px;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     margin: 0px 50px 50px 600px;
+ }
+
+ .in-sesi {
+    color: #D079FC;
+    text-align: 10px 50px 30px 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px 50px 50px 750px;
+ }
+
+ .crear-c{
+        display: inline-block;
+        text-align: center;
+        width: 150px;
+        height: 60px;
+        box-sizing:content-box;
+        margin-left: 600px;
+        margin-right: 50px;
+        margin-bottom: 800px;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 5px solid #333;
+        background-color: whitesmoke; 
+        border-radius: 50px;
+        border-style: hidden;
+ }
+
+ .volver-i{
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    box-sizing:content-box;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+    display: inline-block;
+ }
+/* Tambien esta en login.mt.pug */
+ .img-login-al{
+    width: 480px;
+    height: 420px;
+    padding: 8px 1px 100px 100px;
+    /* border-radius: 20%; */
+    display: inline-block;
+    display:block;
+ }
+
+ /* login.mt.pug */
+ .contraseña{
+    color: #D079FC;
+    text-align: 10px 50px 30px 100px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0px 50px 50px 600px;
+ }
+ 
+ /* signup_mt.pub */
