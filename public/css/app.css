@@ -114,6 +114,17 @@ header{
     border-style: hidden;
 }
 
+/* div.gif{
+    background-image: url("./img/Degradado.gif"); 
+  /* background-position: center 25%;  */
+  /* background-size: cover; */
+  /* float: right; *
+  width: 1000%;
+  height: 1000%;
+  position: absolute;
+} */
+
+
 /* login_al.pug y algunas de login_mt.pug */
 
  .inicio_al, .inicio_mt{
