@@ -60,4 +60,15 @@ router.get("/info",(req,res)=>{
     res.render("clase/info",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school});
 });
 
+//-------------------- Materias --------------------
+router.get("/subject1",(req,res)=>{
+    if(req.session.subject1_name == ""){
+        res.redirect("/app/clase")
+    }else if(req.session.subject1_name !== ""){
+        res.render("clase/subject",{subject_name: req.session.subject1_name});
+    }
+});
+
+//------------------------------------------------------------
+
 module.exports = router;
