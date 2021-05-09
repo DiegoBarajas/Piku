@@ -9,7 +9,7 @@
 .inicio{
     text-align: center;
     font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
-    color: #E67A86;
+    color: #ffffff;
     line-height: 200px;
     font-size: 50px;
 }
@@ -30,6 +30,7 @@
     font-weight: bold;
     color:#D079FC ;
     border-radius: 10%;
+    background: rgba(208, 121, 252 );
 } 
 
    .button2{
@@ -44,16 +45,17 @@
     font-weight: bold;
     color:#D079FC ;
     border-radius: 10%;
+    background: rgba(208, 121, 252 );
 } 
 
 
 .img{
-    width: 300px;
-    height: 300px;
+    width: 400px;
+    height: 400px;
     display:block;
     margin:auto;
     padding: 8px 1px 10px 10px;
-    border-radius: 10%;
+    border-radius: 50%;
     
  }
 
@@ -65,6 +67,34 @@
 a{
     text-decoration: none;
 }
+
+.HAHAHA0{
+  text-align: center;
+  width: 740px;
+  height: 480px;
+  float: right;
+  margin-right: 300px;
+  padding: 50px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: whitesmoke; 
+  border-radius: 50px;
+  border-style: hidden;
+}
+
+video{
+  position: fixed;
+
+  min-width: 100%;
+  min-height: 100%;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translateX(-50%) translateY(-50%);
+
+  z-index: -1;
+} 
 
 /* CSS de index_al */
 header{
@@ -114,22 +144,6 @@ header{
     border-style: hidden;
 }
 
-/* body {
-  background-video: url("./img/difuminado.mp4"); 
-  background-position: center 25%; 
-  background-size: 400px 200px;
-  float: right; 
-  position: absolute;
-  
-} */
-
-body.video-fondo{
-  margin:0;
-}
-
-video{
-  width: 100%;
-}
 
 
 /* login_al.pug y algunas de login_mt.pug */

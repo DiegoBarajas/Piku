@@ -1,11 +1,12 @@
 extend ./layout.pug
 block contenido
   h1(id="h1" class="inicio") #[big Bienvenido a piku]
-  body(class="video-fondo")
-      video(src="../public/resources/difuminado.mp4", alt="gif degradado", autoplay, loop)
-  div
+  body
+    video(src="../public/resources/difuminado.mp4", alt="gif degradado", loop autoplay  )
+  from(class="HAHAHA0")
+    div
      img(class="img" src="../public/resources/logo_piku.png", alt="Logo de piku")
-  div(class="text") 
+    div(class="text") 
     button(class="button1")
       a(href="/login_al") Soy Alumno 
     button(class="button2")
