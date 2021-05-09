@@ -129,15 +129,15 @@ header{
     color: #D079FC;
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    padding: 8px 1px 9px 700px;
+    padding: 8px 4px 9px 760px;
     display: inline-block;
  }
 
- div#XXD.corr_num {
-     color: #D079FC;
-     /* text-align: 10px 50px 30px 100px; */
+ div.corr_num {
+     color: #AEB8F2;
      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
      margin-bottom: 20px;
+     font-size: 20px;
  } 
 .HAHAHA{
     text-align: center;
@@ -161,23 +161,23 @@ header{
     /* text-align: 10px 50px 30px 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* margin: 0px 50px 50px 750px; */
+    margin-bottom: 10px;
  } 
 
   div.crear-c{
-        display: inline-block;
-        /* text-align: center; */
+        text-align: center;
         width: 150px;
         height: 60px;
         box-sizing:content-box;
-        /* margin-left: 600px;
-        margin-right: 50px;
-        margin-bottom: 800px; */
+        margin: auto;
         padding: 20px;
         box-sizing: border-box;
         border: 5px solid #333;
-        background-color: red; 
+        background-color: #F2D474; 
         border-radius: 50px;
         border-style: hidden;
+        display: inline-block;
+        color: azure;
         margin-right: 20px;
  }  
 
@@ -190,17 +190,19 @@ header{
     padding: 20px;
     box-sizing: border-box;
     border: 5px solid #333;
-    background-color: red; 
+    background-color: #F2D474; 
     border-radius: 50px;
     border-style: hidden;
     display: inline-block;
+    color: azure;
  } 
 /* Tambien esta en login.mt.pug */
   .img-login-al{
     width: 450px;
     height: 450px; 
     float: left;
-     padding: 8px 1px 100px 100px;
+    padding: 8px 1px 100px 100px;
+    border-radius: 50px;
   }
     /* border-radius: 20%; */
     /* display: inline-block;
@@ -208,10 +210,10 @@ header{
 
  /* login.mt.pug */
   div.contraseña{
-    color: #D079FC;
-    /* text-align: 10px 50px 30px 100px; */
+    color: #AEB8F2;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* margin: 0px 50px 50px 600px; */
+    margin-bottom: 20px;
+    font-size: 20px;
  }  
  
  /* signup_mt.pub */
