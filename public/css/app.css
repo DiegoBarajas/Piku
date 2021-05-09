@@ -156,12 +156,15 @@ header{
 }
 
 
-  div.in-sesi {
-    color: #D079FC;
+  div.in-sesi:focus,input,input[type=submit]:focus{
+    color: #7195b8;
     /* text-align: 10px 50px 30px 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     /* margin: 0px 50px 50px 750px; */
     margin-bottom: 10px;
+    box-shadow:01px 1px rgb(85, 132, 179)inset,;
+    outline: 0 none;
+
  } 
 
   div.crear-c{
