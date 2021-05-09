@@ -114,15 +114,22 @@ header{
     border-style: hidden;
 }
 
-/* div.gif{
-    background-image: url("./img/Degradado.gif"); 
-  /* background-position: center 25%;  */
-  /* background-size: cover; */
-  /* float: right; *
-  width: 1000%;
-  height: 1000%;
+/* body {
+  background-video: url("./img/difuminado.mp4"); 
+  background-position: center 25%; 
+  background-size: 400px 200px;
+  float: right; 
   position: absolute;
+  
 } */
+
+body.video-fondo{
+  margin:0;
+}
+
+video{
+  width: 100%;
+}
 
 
 /* login_al.pug y algunas de login_mt.pug */
