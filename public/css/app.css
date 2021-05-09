@@ -129,11 +129,9 @@ header{
     color: #D079FC;
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* padding: 8px 4px 9px 760px; */
     text-align: center;
     float: right;
     margin-right: 350px;
-    /* display: inline-block; */
  }
 
  div.corr_num {
@@ -142,12 +140,11 @@ header{
      margin-bottom: 20px;
      font-size: 20px;
  } 
+ /* Fondo blanquito */
 .HAHAHA{
     text-align: center;
     width: 540px;
     height: 340px;
-    /* margin-left: auto;
-    margin-right: auto; */
     float: right;
     margin-right: 200px;
     padding: 70px;
@@ -158,14 +155,14 @@ header{
     border-style: hidden;
 }
 
+        /* Bonones */
 
   div.in-sesi:focus,input,input[type=submit]:focus{
     color: #7195b8;
-    /* text-align: 10px 50px 30px 100px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    /* margin: 0px 50px 50px 750px; */
-    margin-bottom: 10px;
-    box-shadow:01px 1px rgb(85, 132, 179)inset,;
+    margin-bottom: 15px;
+    font-size: 18px;
+    box-shadow:01px 20px rgb(85, 132, 179)inset,;
     outline: 0 none;
 
  } 
@@ -207,16 +204,11 @@ header{
     width: 450px;
     height: 450px; 
     float: left;
-    /* padding: 20px;  */
     margin-left: 60px;
     margin-top: 30px;
     margin-bottom: 30px;
-    /* border-radius: 50px; */
     clip-path: circle();
   }
-    /* border-radius: 20%; */
-    /* display: inline-block;
-    display:block; */ 
 
  /* login.mt.pug */
   div.contraseña{
@@ -227,3 +219,135 @@ header{
  }  
  
  /* signup_mt.pub */
+
+ .img-signup{
+    width: 450px;
+    height: 450px; 
+    float: left;
+    margin-left: 60px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    clip-path: circle();
+  }
+  
+  h1.crea-cuen{
+    text-align:left;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: inline-block;
+    font-size: 30px;
+    color:#E67A86 ;
+    margin: 50px 0 20px 50px;
+  }
+
+  h3.titu-signup{
+    color: #D079FC;
+    font-size: 70px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+    float: right;
+    margin-right: 350px;
+  }
+
+  div.nombre-signup{
+    color: #AEB8F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  div.apelli-signup{
+    color: #AEB8F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  div.corr-num-signup{
+    color: #AEB8F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  div.contraseña-signup{
+    color: #AEB8F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  div.contraseña-confir-signup{
+    color: #AEB8F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+
+  div.fecha-naci-signup{
+    color: #AEB8F2;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  div.volver-i-signup{
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    box-sizing:content-box;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: #F2D474; 
+    border-radius: 50px;
+    border-style: hidden;
+    display: inline-block;
+    color: azure;
+  }
+
+  div.tengo-cuent{
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    box-sizing:content-box;
+    margin: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: #F2D474; 
+    border-radius: 50px;
+    border-style: hidden;
+    display: inline-block;
+    color: azure;
+    margin-right: 20px;
+  }
+
+  .HAHAHA2{
+    text-align: center;
+    width: 540px;
+    height: 570px;
+    float: right;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    padding: 70px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+}
+/* signup_al.pug */
+.HAHAHA3{
+    text-align: center;
+    width: 540px;
+    height: 460px;
+    float: right;
+    margin-right: 200px;
+    margin-bottom: 50px;
+    padding: 70px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+}
