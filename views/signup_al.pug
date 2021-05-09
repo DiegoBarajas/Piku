@@ -1,32 +1,31 @@
 extend ./layout.pug
 block contenido 
-    h1 Crear Cuenta
+    h1(class="crea-cuen") Crear Cuenta
     div
-        h3 Alumno
-        form(action="/new_user",method="POST", id="formulario")
-            div(class="formulario-signup_al", id="name")
+        h3(class="titu-signup") Alumno
+    div
+     img(class="img-signup" src="../public/resources/logo_piku.png", alt="Logo de piku")
+     form(action="/new_user",method="POST", id="formulario", class="HAHAHA3")
+            div(class="nombre-signup", id="name")
                 label(for="name") Nombre:
                 input(type="text", name="name", placeholder="Nombre", id="name", required, class="formulario-input") 
 
-            div
+            div(class="apelli-signup")
                 label(for="lastname") Apellido:
                 input(type="text", name="lastname", placeholder="Apellido", id="lastname", required)
 
-            div(class="email" id="email")
+            div(class="corr-num-signup" id="email")
                 label(for="email")  Correo o Número de teléfono:
                 input(type="text", name="email", placeholder="Correo o Número de teléfono", id="email", required)
 
-            div
+            div(class="fecha-naci-signup")
                 label(for="birthday") Fecha de Nacimiento: 
                 input(type="date", name="birthday", placeholder="Fecha de Nacimiento ", id="birthday", required)
 
             div 
                 input(type="submit", value="Crear Cuenta")
 
-        div
-            a(href="/login_al") Ya tengo Cuenta
-        div
-        a(href="/") Volver al inicio 
-
-
-           
+            div(class="tengo-cuent")
+                a(href="/login_al") Ya tengo Cuenta
+            div(class="volver-i-signup")
+                a(href="/") Volver al inicio 

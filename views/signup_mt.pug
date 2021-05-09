@@ -1,37 +1,39 @@
 extend ./layout.pug
 block contenido  
-    h1(class="cre-cue") Crear Cuenta 
+    h1(class="crea-cuen") Crear Cuenta 
     div
-        h3(class="titu-signup-mt") Maestro
-    form(action="/new_user",method="POST")
-        div
-            label(for="name") Nombre:
+        h3(class="titu-signup") Maestro
+    div
+     img(class="img-signup" src="../public/resources/logo_piku.png", alt="Logo de piku")
+    form(action="/new_user",method="POST" class="HAHAHA2")
+        div(class="nombre-signup")
+            label(for="name") Nombre: 
             input(type="text", name="name", placeholder="Nombre", id="name", required) 
 
-        div
-            label(for="lastname") Apellido:
+        div(class="apelli-signup")
+            label(for="lastname") Apellido: 
             input(type="text", name="lastname", placeholder="Apellido", id="lastname", required)
 
-        div
+        div(class="corr-num-signup")
             label(for="email") Correo o número de Teléfono:
             input(type="text", name="email", placeholder="Correo o número de telefono", id="email", required)
 
-        div
-            label(for="password") Contraseña:
+        div(class="contraseña-signup")
+            label(for="password") Contraseña: 
             input(type="password", name="password", placeholder="Contraseña", id="password", required)
 
-        div
-            label(for="password_c") Confirmar contraseña:
+        div(class="contraseña-confir-signup")
+            label(for="password_c") Confirmar contraseña: 
             input(type="password", name="password_c", placeholder="Confirmar contraseña", id="password_c", required)
 
-        div
-            label(for="birthday") Fecha de Nacimiento: 
+        div(class="fecha-naci-signup")
+            label(for="birthday") Fecha de Nacimiento:  
             input(type="date", name="birthday", placeholder="Fecha de Nacimiento ", id="birthday", required)
 
         div 
             input(type="submit", value="Crear cuenta")
 
-        div
-            a(href="/login_al") Ya tengo Cuenta
-        div
-        a(href="/") Volver al inicio 
+        div(class="tengo-cuent")
+            a(href="/login_al") Ya tengo cuenta
+        div(class="volver-i-signup")
+            a(href="/") Volver al inicio 
