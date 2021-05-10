@@ -16,11 +16,11 @@ block contenido
    div
    h1(class="hola-bienve") Hola #{name}, ¡Bienvenid@! 
    from(class="HAHAHA5")
-      div(class="unirme-clas") 
-         h3 ¡Unete a una clase!   
+      div 
+         h3(class="unirme-clas") ¡Unete a una clase!   
          form(action="/app/entrar_clase",method="POST")
             div
-               label(for="cod") Codigo de clase:
+               label(for="cod" class="cod-clas") Codigo de clase:
                input(type="number", name="cod", placeholder="Codigo de clase", id="cod", required)
             div 
                input(type="submit", value="Unirme a la clase")   

@@ -513,6 +513,14 @@ header{
 }
 
 /* index_mt */
+
+.unirme-clas{
+  font-size: 35px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 15px;
+  color:#D079FC;
+}
+
 .HAHAHA5{
   text-align: center;
   width: 540px;
@@ -532,9 +540,9 @@ header{
 .HAHAHA6{
   text-align: center;
   width: 150px;
-  height: 70px;
+  height: 50px;
   float: right;
-  margin-top:20px;
+  margin-top:80px;
   margin-right: 150px;
   padding: 0px;
   box-sizing: border-box;
