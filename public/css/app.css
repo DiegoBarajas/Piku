@@ -106,17 +106,33 @@ header{
 	font-size: 15px;
 }
 
-.button_S{
-    margin-right: 323px;
+svg{
+  color: #ffffff;
+
 }
+
+.button_S{
+    background-color: #F2D474;
+    float: left;
+    margin-right: 10px;
+    border: none;
+}
+
+
 .Crear_Clase{
     margin-right: 323px;
+    background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
+    border: none;
 }
 .button_M_U{
-    margin-right: 0px;
+    background-color: #E67A86;
+    float: right;
+    border: none;
 }
 .button_Mi{
-    margin-right: 322px;
+    background-color: #F2D474;
+    float: center;
+    border: none;
    }
 .block{
     width: 240px;
