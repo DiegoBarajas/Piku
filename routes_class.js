@@ -36,18 +36,18 @@ router.get("/",(req,res)=>{
             req.session.class_group = r.group;
             req.session.class_turn = r.turn;
             req.session.class_school = r.school;
-            req.session.subject1_name = r.subject1.subject_name;
-            req.session.subject2_name = r.subject2.subject_name;
-            req.session.subject3_name = r.subject3.subject_name;
-            req.session.subject4_name = r.subject4.subject_name;
-            req.session.subject5_name = r.subject5.subject_name;
-            req.session.subject6_name = r.subject6.subject_name;
-            req.session.subject7_name = r.subject7.subject_name;
-            req.session.subject8_name = r.subject8.subject_name;
-            req.session.subject9_name = r.subject9.subject_name;
-            req.session.subject10_name = r.subject10.subject_name;
+            req.session.subject_name1 = r.subject1.subject_name;
+            req.session.subject_name2 = r.subject2.subject_name;
+            req.session.subject_name3 = r.subject3.subject_name;
+            req.session.subject_name4 = r.subject4.subject_name;
+            req.session.subject_name5 = r.subject5.subject_name;
+            req.session.subject_name6 = r.subject6.subject_name;
+            req.session.subject_name7 = r.subject7.subject_name;
+            req.session.subject_name8 = r.subject8.subject_name;
+            req.session.subject_name9 = r.subject9.subject_name;
+            req.session.subject_name10 = r.subject10.subject_name;
 
-            res.render("clase/index",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school, materia1: req.session.subject1_name, materia2: req.session.subject2_name, materia3: req.session.subject3_name, materia4: req.session.subject4_name, materia5: req.session.subject5_name, materia6: req.session.subject6_name, materia7: req.session.subject7_name, materia8: req.session.subject8_name, materia9: req.session.subject9_name, materia10: req.session.subject10_name});
+            res.render("clase/index",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school, materia1: req.session.subject_name1, materia2: req.session.subject_name2, materia3: req.session.subject_name3, materia4: req.session.subject_name4, materia5: req.session.subject_name5, materia6: req.session.subject_name6, materia7: req.session.subject_name7, materia8: req.session.subject_name8, materia9: req.session.subject_name9, materia10: req.session.subject_name10});
         }catch(err){
             console.log(err);
             res.send("Esa clase no existe");
@@ -61,11 +61,14 @@ router.get("/info",(req,res)=>{
 });
 
 //-------------------- Materias --------------------
-router.get("/subject1",(req,res)=>{
-    if(req.session.subject1_name == ""){
+router.get("/subject/:nc",(req,res)=>{
+    var ns = req.url.split("/");
+    ns = ns[2];
+    var sub_name = eval("req.session.subject_name"+""+ns+"");
+    if(sub_name == ""){
         res.redirect("/app/clase")
-    }else if(req.session.subject1_name !== ""){
-        res.render("clase/subject",{subject_name: req.session.subject1_name});
+    }else if(sub_name !== ""){
+        res.render("clase/subject",{subject_name: sub_name});
     }
 });
 
