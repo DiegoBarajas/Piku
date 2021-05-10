@@ -16,7 +16,8 @@ block contenido
     div(class="block")
       p #[h3 Nombre:] #{name} #{lastname}
       p #[h3 Tipo de Usuario:] #{usertype.toUpperCase()}
-      p #[h3 Correo:] #{email}
+      p #[h3 Correo o número:] #{email}
+      p #[h3 Fecha de nacimiento: ] #{birthday}
       -if(classcode == null){classcode = "Sin Clase"}
       p #[h3 Codigo de clase:] #{classcode}
       p #[h3 Pikoins:] #{pikoins}

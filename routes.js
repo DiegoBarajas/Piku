@@ -381,7 +381,7 @@ router.post("/user_edited",(req,res)=>{
                 console.log("Documento editado: ")
                 console.log(user);
 
-                res.render("app/user_edited");
+                res.redirect("/app/myuser");
             }catch(err){
                 console.log(err);
                 res.redirect("/app");
@@ -432,7 +432,7 @@ router.post("/user_edited",(req,res)=>{
                     console.log("Documento editado: ")
                     console.log(user);
 
-                    res.render("app/user_edited");
+                    res.redirect("/app/myuser");
                 }catch(err){
                     console.log(err);
                     res.redirect("/app");
