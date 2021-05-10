@@ -96,56 +96,6 @@ video{
   z-index: -1;
 } 
 
-/* CSS de index_al */
-header{
-    background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
-    width: 100%;
-    height: 80px;
-	padding: 0px;
-	text-decoration: none;
-	font-size: 15px;
-}
-
-.button_S{
-    margin-right: 323px;
-}
-.Crear_Clase{
-    margin-right: 323px;
-}
-.button_M_U{
-    margin-right: 0px;
-}
-.button_Mi{
-    margin-right: 322px;
-   }
-.block{
-    width: 240px;
-    height: 340px;
-    margin-left: 1125px;
-    margin-right: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 5px solid #333;
-    background-image: linear-gradient(to right,#FCAE79,#E67A86); 
-
-}
-
-.block2{
-    text-align: center;
-    width: 540px;
-    height: 340px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 5px solid #333;
-    background-color: whitesmoke; 
-    border-radius: 50px;
-    border-style: hidden;
-}
-
-
-
 /* login_al.pug y algunas de login_mt.pug */
 
  .inicio_al, .inicio_mt{
@@ -383,3 +333,129 @@ header{
     border-radius: 50px;
     border-style: hidden;
 }
+
+/* id_registered */
+.corrnum-titu{
+  font-size: 40px;
+  color: #D079FC;
+  padding-left: 300px;
+  padding-top: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.inten-nue{
+  font-size: 25px;
+  color: #7195b8;
+  padding-left: 380px;
+  padding-top: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+
+.volver-ini{
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  box-sizing:content-box;
+  margin-left: 610px;
+  margin-top: 10px;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: #F2D474; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: inline-block;
+  color:#6d4e3a;
+}
+
+.img-inco{
+  width:400px ;
+  height:400px;
+  margin-left: 470px;
+}
+
+/* index_al */
+header{
+  background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
+  width: 100%;
+  height: 80px;
+	padding: 0px;
+	text-decoration: none;
+	font-size: 15px;
+}
+
+.button_S{
+    margin-right: 323px;
+}
+.Crear_Clase{
+    margin-right: 323px;
+}
+.button_M_U{
+    margin-right: 0px;
+}
+.button_Mi{
+    margin-right: 322px;
+   }
+.block{
+    width: 240px;
+    height: 340px;
+    margin-left: 1125px;
+    margin-right: 0;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-image: linear-gradient(to right,#FCAE79,#E67A86); 
+
+}
+
+.block2{
+    text-align: center;
+    width: 540px;
+    height: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+}
+
+.hola-bienve{
+  font-size: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  text-align: center;
+  padding-top: 50px;
+  color:#E67A86;
+}
+.HAHAHA4{
+  text-align: center;
+  width: 540px;
+  height: 220px;
+  float: right;
+  margin-top:20px;
+  margin-right: 400px;
+  margin-bottom: 30px;
+  padding: 50px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: whitesmoke; 
+  border-radius: 50px;
+  border-style: hidden;
+}
+
+.unir-clas{
+  font-size: 35px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-bottom: 15px;
+  color:#D079FC;
+}
+
+.cod-clas{
+  font-size: 25px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #7195b8;
+}
+
