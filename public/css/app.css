@@ -430,7 +430,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 /* index_al */
 header{
-  background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
+  background-color:#F2D474;
   width: 100%;
   height: 80px;
 	padding: 0px;
@@ -475,7 +475,7 @@ header{
     border-radius: 50px;
     border-style: hidden;
 }
-
+    /* tambien esta en index_mt */
 .hola-bienve{
   font-size: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -512,3 +512,34 @@ header{
   color: #7195b8;
 }
 
+/* index_mt */
+.HAHAHA5{
+  text-align: center;
+  width: 540px;
+  height: 220px;
+  float: right;
+  margin-top:20px;
+  margin-right: 400px;
+  margin-bottom: 30px;
+  padding: 50px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: whitesmoke; 
+  border-radius: 50px;
+  border-style: hidden;
+}
+
+.HAHAHA6{
+  text-align: center;
+  width: 150px;
+  height: 70px;
+  float: right;
+  margin-top:20px;
+  margin-right: 150px;
+  padding: 0px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: whitesmoke; 
+  border-radius: 50px;
+  border-style: hidden;
+}

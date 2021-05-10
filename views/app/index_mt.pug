@@ -14,18 +14,20 @@ block contenido
                   path(fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z")
                a(href="/app/myuser") Mi Usuario
    div
-   h1 Hola #{name}, ¡bienvenido! 
-   -if(classcode == null){
-      div
-         h3 #[a(href="/app/crear_clase") Crear clase]
-      div 
-         h3 Unirme a una clase   
+   h1(class="hola-bienve") Hola #{name}, ¡Bienvenid@! 
+   from(class="HAHAHA5")
+      div(class="unirme-clas") 
+         h3 ¡Unete a una clase!   
          form(action="/app/entrar_clase",method="POST")
             div
-               label(for="cod") Codigo de Clase:
-               input(type="number", name="cod", placeholder="Codigo de Clase", id="cod", required)
+               label(for="cod") Codigo de clase:
+               input(type="number", name="cod", placeholder="Codigo de clase", id="cod", required)
             div 
-               input(type="submit", value="Unirme a Clase")
+               input(type="submit", value="Unirme a la clase")   
+         from(class="HAHAHA6")
+           -if(classcode == null){
+             div(class="crear-class")
+                 h3 #[a(href="/app/crear_clase") Crear clase]
    -}else if(classcode !== null){
       div
          h2 #[a(href="/app/clase") #{classname}]
