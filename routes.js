@@ -157,7 +157,7 @@ router.post("/nueva_clase",(req,res)=>{
                         r = await db.insert(doc_ed);
                         console.log("Documento editado")
                         
-                        res.render("app/clase_creada");
+                        res.redirect("/app");
                     }catch(err){
                         console.log(err);
                         res.send("Ha ocurrdo un error, intenta de nuevo por favor");
@@ -258,7 +258,7 @@ router.post("/nueva_clase",(req,res)=>{
                                 r = await db.insert(doc_ed);
                                 console.log("Documento editado")
                         
-                                res.render("app/clase_creada");
+                                res.redirect("/app");
                             }catch(err){
                                 console.log(err);
                                 res.send("Ha ocurrdo un error, intenta de nuevo por favor");

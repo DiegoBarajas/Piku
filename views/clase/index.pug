@@ -21,6 +21,10 @@ block contenido
 
     
    h1 #{classname}
+   -if(description == ""){
+   -}else if(description !== ""){
+      p #[b Descripcion: ] #{description}
+   -}
    h3 #[a(href="/app/clase/subject/1") #{materia1}]
    h3 #[a(href="/app/clase/subject/2") #{materia2}]
    h3 #[a(href="/app/clase/subject/3") #{materia3}]
