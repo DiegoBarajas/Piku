@@ -12,12 +12,28 @@ block contenido
           svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi-bi-columns-gap" viewBox="0 0 16 16")
              path(d="M6 1v3H1V1h5zM1 0a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1H1zm14 12v3h-5v-3h5zm-5-1a1 1 0 0 0-1 1v3a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1v-3a1 1 0 0 0-1-1h-5zM6 8v7H1V8h5zM1 7a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V8a1 1 0 0 0-1-1H1zm14-6v7h-5V1h5zm-5-1a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h5a1 1 0 0 0 1-1V1a1 1 0 0 0-1-1h-5z")
           a(href="/app") Inicio
+    h1 Editar mi informacion
+    form(action="/app/user_edited",method="POST")
+        div
+            p #[b Actual nombre:] #{name}
+            label(for="nname") Nuevo Nombre: 
+            input(type="text", name="nname", placeholder="Nombre", id="nname") 
 
-    div(class="block")
-      p #[h3 Nombre:] #{name} #{lastname}
-      p #[h3 Tipo de Usuario:] #{usertype.toUpperCase()}
-      p #[h3 Correo:] #{email}
-      -if(classcode == null){classcode = "Sin Clase"}
-      p #[h3 Codigo de clase:] #{classcode}
-      p #[h3 Pikoins:] #{pikoins}
-      a(href="/app/edit_user") Editar mi informacion
+        div
+            p #[b Actual apellido:] #{lastname}
+            label(for="nlastname") Nuevo Apellido: 
+            input(type="text", name="nlastname", placeholder="Apellido", id="nlastname")
+
+        div
+            p #[b Actual fecha de nacimiento:] #{birthday}
+            label(for="nbirthday") Nueva Fecha de Nacimiento:  
+            input(type="date", name="nbirthday", placeholder="Fecha de Nacimiento ", id="nbirthday")
+        -if(usertype == "maestro"){
+            div
+                label(for="password") Contraseña: 
+                input(type="password", name="password", placeholder="Contraseña", id="password", required)
+        -}else if(usertype == "alumno"){}
+        div 
+            input(type="submit", value="Editar informacion")
+        h3 #{error}
+    a(href="/app/myuser") Cancelar 
