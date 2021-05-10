@@ -199,6 +199,7 @@ app.post("/user_mt",(req,res)=>{
                     req.session.user_birthday = user.birthday;
                     req.session.user_classcode = user.classcode;
                     req.session.user_pikoins = user.pikoins;
+                    req.session.user_password = user.password;
 
                     res.redirect("/app");
                 }else if(req.body.password !== user.password){
@@ -219,6 +220,7 @@ app.get("/logout",(req,res)=>{
     req.session.user_birthday = undefined;
     req.session.user_classcode = undefined;
     req.session.user_pikoins = undefined;
+    req.session.user_password = undefined;
 //----------CLass-----------
     req.session.class_id = undefined;
     req.session.class_classname = undefined;

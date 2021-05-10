@@ -21,16 +21,20 @@ block contenido
 
     
    h1 #{classname}
-   h3 #[a(href="/app/clase/subject1") #{materia1}]
-   h3 #[a(href="/app/clase/subject2") #{materia2}]
-   h3 #[a(href="/app/clase/subject3") #{materia3}]
-   h3 #[a(href="/app/clase/subject4") #{materia4}]
-   h3 #[a(href="/app/clase/subject5") #{materia5}]
-   h3 #[a(href="/app/clase/subject6") #{materia6}]
-   h3 #[a(href="/app/clase/subject7") #{materia7}]
-   h3 #[a(href="/app/clase/subject8") #{materia8}]
-   h3 #[a(href="/app/clase/subject9") #{materia9}]
-   h3 #[a(href="/app/clase/subject10") #{materia10}]
+   -if(description == ""){
+   -}else if(description !== ""){
+      p #[b Descripcion: ] #{description}
+   -}
+   h3 #[a(href="/app/clase/subject/1") #{materia1}]
+   h3 #[a(href="/app/clase/subject/2") #{materia2}]
+   h3 #[a(href="/app/clase/subject/3") #{materia3}]
+   h3 #[a(href="/app/clase/subject/4") #{materia4}]
+   h3 #[a(href="/app/clase/subject/5") #{materia5}]
+   h3 #[a(href="/app/clase/subject/6") #{materia6}]
+   h3 #[a(href="/app/clase/subject/7") #{materia7}]
+   h3 #[a(href="/app/clase/subject/8") #{materia8}]
+   h3 #[a(href="/app/clase/subject/9") #{materia9}]
+   h3 #[a(href="/app/clase/subject/10") #{materia10}]
    a(href="/app") Volver 
 
     

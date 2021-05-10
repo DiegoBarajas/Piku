@@ -157,7 +157,7 @@ router.post("/nueva_clase",(req,res)=>{
                         r = await db.insert(doc_ed);
                         console.log("Documento editado")
                         
-                        res.render("app/clase_creada");
+                        res.redirect("/app");
                     }catch(err){
                         console.log(err);
                         res.send("Ha ocurrdo un error, intenta de nuevo por favor");
@@ -258,7 +258,7 @@ router.post("/nueva_clase",(req,res)=>{
                                 r = await db.insert(doc_ed);
                                 console.log("Documento editado")
                         
-                                res.render("app/clase_creada");
+                                res.redirect("/app");
                             }catch(err){
                                 console.log(err);
                                 res.send("Ha ocurrdo un error, intenta de nuevo por favor");
@@ -331,6 +331,117 @@ router.post("/entrar_clase",(req,res)=>{
         } 
     }
 });
+
+//------------------- Editar info de user -------------------
+router.get("/edit_user",(req,res)=>{
+    res.render("app/edit_user",{name: req.session.user_name, lastname: req.session.user_lastname, birthday: req.session.user_birthday, usertype: req.session.user_type});
+});
+
+//------------------- Editando info en DB -------------------
+router.post("/user_edited",(req,res)=>{
+    if(req.session.user_type == "alumno"){
+        cloudant_ep();
+        async function cloudant_ep(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+                console.log("Obteniendo DB");
+                const db = cloudant.db.use("piku_users");
+                let user="";
+                user= await db.get(req.session.user_id);
+                console.log("DB Obtenida");
+                doc_ed = user;
+
+                doc_ed["_rev"]=user._rev
+                if(req.body.nname == ""){
+                    doc_ed.name = req.session.user_name;
+                }else if(req.body.nname !== ""){
+                    doc_ed.name = req.body.nname;
+                }
+                if(req.body.nlastname == ""){
+                    doc_ed.lastname = req.session.user_lastname;
+                }else if(req.body.nlastname !== ""){
+                    doc_ed.lastname = req.body.nlastname;
+                }
+                if(req.body.nbirthday == ""){
+                    doc_ed.birthday = req.session.user_birthday;
+                }else if(req.body.nbirthday !== ""){
+                    doc_ed.birthday = req.body.nbirthday;
+                }
+
+                user = await db.insert(doc_ed);
+                console.log("Documento editado: ")
+                console.log(user);
+
+                res.redirect("/app/myuser");
+            }catch(err){
+                console.log(err);
+                res.redirect("/app");
+            }
+        }
+    }else if(req.session.user_type == "maestro"){
+        if(req.body.password !== req.session.user_password){
+            res.render("app/edit_user",{name: req.session.user_name, lastname: req.session.user_lastname, birthday: req.session.user_birthday, usertype: req.session.user_type, error: "La contraseña es incorrecta"})
+        }else if(req.body.password == req.session.user_password){
+            cloudant_ep();
+            async function cloudant_ep(){
+                try {
+                    console.log("Creando conexion con base de datos....");
+                    const cloudant = Cloudant({
+                        url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                        plugins:{
+                            iamauth:{
+                                iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                            }
+                        }
+                    });
+                    console.log("Conexion creada");
+                    console.log("Obteniendo DB");
+                    const db = cloudant.db.use("piku_users");
+                    let user="";
+                    user= await db.get(req.session.user_id);
+                    console.log("DB Obtenida");
+                    doc_ed = user;
+
+                    doc_ed["_rev"]=user._rev
+                    if(req.body.nname == ""){
+                        doc_ed.name = req.session.user_name;
+                    }else if(req.body.nname !== ""){
+                        doc_ed.name = req.body.nname;
+                    }
+                    if(req.body.nlastname == ""){
+                        doc_ed.lastname = req.session.user_lastname;
+                    }else if(req.body.nlastname !== ""){
+                        doc_ed.lastname = req.body.nlastname;
+                    }
+                    if(req.body.nbirthday == ""){
+                        doc_ed.birthday = req.session.user_birthday;
+                    }else if(req.body.nbirthday !== ""){
+                        doc_ed.birthday = req.body.nbirthday;
+                    }
+
+                    user = await db.insert(doc_ed);
+                    console.log("Documento editado: ")
+                    console.log(user);
+
+                    res.redirect("/app/myuser");
+                }catch(err){
+                    console.log(err);
+                    res.redirect("/app");
+                }
+            }
+        }
+    }
+});
+
 
 router.use("/clase", clases_middleware);
 router.use("/clase", router_class);
