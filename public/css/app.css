@@ -375,6 +375,59 @@ video{
   margin-left: 470px;
 }
 
+/* wrong_pass */
+
+.ups{
+  font-size: 38px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #D079FC;
+  text-align: center;
+}
+
+.contra-inco{
+  font-size: 33px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #7195b8;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.intenta-de-nu{
+  text-align: center;
+  width: 150px;
+  height: 60px;
+  box-sizing:content-box;
+  margin-left: 511px;
+  margin-top: 20px;
+  padding: 16px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: #F2D474; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: inline-block;
+  color:#6d4e3a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.volver-ini-wrong-pass{
+text-align: center;
+width: 150px;
+height: 60px;
+box-sizing:content-box;
+margin-left: 15px;
+margin-bottom: 40px;
+margin-top: 20px;
+padding: 19px;
+box-sizing: border-box;
+border: 5px solid #333;
+background-color: #F2D474; 
+border-radius: 50px;
+border-style: hidden;
+display: inline-block;
+color:#6d4e3a;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 /* index_al */
 header{
   background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
