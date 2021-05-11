@@ -12,6 +12,9 @@
     color: #ffffff;
     line-height: 200px;
     font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
@@ -48,15 +51,16 @@
     background: rgba(208, 121, 252 );
 } 
 
+.imggg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .img{
     width: 400px;
     height: 400px;
-    display:block;
-    margin:auto;
-    padding: 8px 1px 10px 10px;
     border-radius: 50%;
-    
 }
 
 body{
@@ -72,14 +76,15 @@ a{
   text-align: center;
   width: 740px;
   height: 480px;
-  float: right;
-  margin-right: 300px;
   padding: 50px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 video{
@@ -124,12 +129,12 @@ div.corr_num {
 } 
  /* Fondo blanquito */
 .HAHAHA{
-    text-align: center;
+    text-align: left;
     width: 540px;
     height: 340px;
     float: right;
     margin-right: 200px;
-    padding: 70px;
+    padding: 50px;
     box-sizing: border-box;
     border: 5px solid #333;
     background-color: whitesmoke; 
@@ -380,10 +385,10 @@ div.corr_num {
 header{
   background-color: #F2D474;
   width: 100%;
-  height: 80px;
+  height: 45px;
 	padding: 0px;
-	text-decoration: none;
-	font-size: 15px;
+	text-decoration: none; 
+	font-size: 15px; 
 }
 
 .button_S{
