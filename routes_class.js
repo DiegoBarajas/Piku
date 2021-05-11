@@ -83,7 +83,7 @@ router.get("/subject/:nc",(req,res)=>{
         res.redirect("/app/clase")
     }else if(sub_name !== ""){
         res.render("clase/subject",{subject_name: sub_name});
-        console.log(sub_post.post1);
+        console.log(req.session.subject_post1);
     }
 });
 
