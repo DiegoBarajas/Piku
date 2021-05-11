@@ -440,15 +440,21 @@ header{
 
 .button_S{
     margin-right: 323px;
+    background-color: #F2D474;
+    border: none;
 }
 .Crear_Clase{
     margin-right: 323px;
 }
 .button_M_U{
     margin-right: 0px;
+    background-color: #F2D474;
+    border: none;
 }
 .button_Mi{
     margin-right: 322px;
+    background-color: #F2D474;
+    border: none;
    }
 .block{
     width: 240px;
@@ -553,5 +559,5 @@ header{
 }
 
 svg{
-  color: #F2D474;
+  color: #E67A86;
 }
