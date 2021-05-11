@@ -372,7 +372,7 @@ video{
 
 /* index_al */
 header{
-  background-image: linear-gradient(to right,#F2D474,#FCAE79,#E67A86);
+  background-color: #F2D474;
   width: 100%;
   height: 80px;
 	padding: 0px;
@@ -525,6 +525,7 @@ header{
   background-color: #F2D474; 
   border-radius: 50px;
   border-style: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 svg{
