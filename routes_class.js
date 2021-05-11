@@ -58,6 +58,7 @@ router.get("/",(req,res)=>{
             req.session.subject_post8 = r.subject8.posts;
             req.session.subject_post9 = r.subject9.posts;
             req.session.subject_post10 = r.subject10.posts;
+            console.log("Documento obtenido");
             
 
             res.render("clase/index",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school, materia1: req.session.subject_name1, materia2: req.session.subject_name2, materia3: req.session.subject_name3, materia4: req.session.subject_name4, materia5: req.session.subject_name5, materia6: req.session.subject_name6, materia7: req.session.subject_name7, materia8: req.session.subject_name8, materia9: req.session.subject_name9, materia10: req.session.subject_name10});
@@ -83,7 +84,10 @@ router.get("/subject/:nc",(req,res)=>{
         res.redirect("/app/clase")
     }else if(sub_name !== ""){
         res.render("clase/subject",{subject_name: sub_name});
-        console.log(req.session.subject_post1);
+        var post1 = req.session.subject_post1.join("/");
+        console.log(req.url);
+        console.log(req.url.split("/"));
+        console.log(post1);
     }
 });
 
