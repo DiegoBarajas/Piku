@@ -1,9 +1,12 @@
 extend ./layout.pug 
 block contenido 
-    img(class="img-inco" src="../public/resources/piku-incomodo.png", alt="piku incomodo")
+    div(class="imginco")
+      img(class="img-inco" src="../public/resources/piku-incomodo.png", alt="piku incomodo")
+    div
     h1(class="ups") Ups!!!! 
     h3(class="contra-inco") La contraseña es incorrecta
-    div(class="intenta-de-nu") 
-        a(href="/login_mt") Intentar de nuevo 
-    div(class="volver-ini-wrong-pass")
-        a(href="/") Volver al inicio 
+    div(class="Ojo")
+      div(class="intenta-de-nu") 
+          a(href="/login_mt") Intentar de nuevo 
+      div(class="volver-ini-wrong-pass")
+          a(href="/") Volver al inicio 
