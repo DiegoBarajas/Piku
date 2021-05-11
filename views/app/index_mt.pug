@@ -15,19 +15,19 @@ block contenido
                a(href="/app/myuser") Mi Usuario
    div
    h1(class="hola-bienve") Hola #{name}, ¡Bienvenid@! 
-   from(class="HAHAHA5")
-      div 
-         h3(class="unirme-clas") ¡Unete a una clase!   
-         form(action="/app/entrar_clase",method="POST")
-            div
-               label(for="cod" class="cod-clas") Codigo de clase:
-               input(type="number", name="cod", placeholder="Codigo de clase", id="cod", required)
-            div 
-               input(type="submit", value="Unirme a la clase")   
-         from(class="HAHAHA6")
-           -if(classcode == null){
-             div(class="crear-class")
-                 h3 #[a(href="/app/crear_clase") Crear clase]
+   -if(classcode == null){
+      from(class="HAHAHA5")
+         div 
+            h3(class="unirme-clas") ¡Unete a una clase!   
+            form(action="/app/entrar_clase",method="POST")
+               div
+                  label(for="cod" class="cod-clas") Codigo de clase:
+                  input(type="number", name="cod", placeholder="Codigo de clase", id="cod", required)
+               div 
+                  input(type="submit", value="Unirme a la clase")   
+            from(class="HAHAHA6")
+               div(class="crear-class")
+                  h3 #[a(href="/app/crear_clase") Crear clase]
    -}else if(classcode !== null){
       div
          h2 #[a(href="/app/clase") #{classname}]
