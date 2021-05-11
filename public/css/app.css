@@ -551,3 +551,7 @@ header{
   border-radius: 50px;
   border-style: hidden;
 }
+
+svg{
+  color: #F2D474;
+}
