@@ -334,6 +334,12 @@ div.corr_num {
     border-style: hidden;
 }
 
+.img-ne-user{
+  width: 400px;
+  height: 400px;
+  border-radius: 20%;
+}
+
 /* id_registered */
 .corrnum-titu{
   font-size: 40px;
