@@ -60,8 +60,7 @@
 .img{
     width: 400px;
     height: 400px;
-    display:block;
-    margin:auto;
+    display: flex;
     padding: 8px 1px 10px 10px;
     border-radius: 50%;
     
@@ -80,14 +79,15 @@ a{
   text-align: center;
   width: 740px;
   height: 480px;
-  float: right;
-  margin-right: 300px;
   padding: 50px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 video{
@@ -390,8 +390,8 @@ div.corr_num {
 header{
   background-color: #F2D474;
   width: 100%;
-  height: 80px;
-	padding: 0px;
+  height: 55px;
+	padding: 5px;
 	text-decoration: none;
 	font-size: 15px;
 }
@@ -412,6 +412,10 @@ header{
 .button_Mi{
     margin-right: 322px;
     background-color: #F2D474;
+    border: none;
+}
+.button_info{
+  background-color: #F2D474;
     border: none;
 }
 .block{
