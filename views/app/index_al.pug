@@ -31,10 +31,8 @@ block contenido
          div(class="cod-clas")
             label(for="cod") Codigo de clase: 
             input(type="number", name="cod", placeholder="Codigo de clase", id="cod", required)
-   div(class="Ojo")
-    from(class="HAHAHASUB") 
-      input(type="submit", value="Unirme a la clase", class="HAHAHASUb")
-   -}else if(classcode !== null){
+            input(type="submit", value="Unirme a la clase")
+      -}else if(classcode !== null){
       div(class="info-clas")
          h2 #[a(href="/app/clase") #{classname}]
          p #[b Codigo de clase:] #{classcode}
