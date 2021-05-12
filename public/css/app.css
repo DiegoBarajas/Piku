@@ -554,8 +554,8 @@ svg{
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
 
 .HAHAHA6{
   text-align: center;
@@ -563,7 +563,7 @@ svg{
   height: 70px;
   float: right;
   margin-top:5px;
-  margin-right: 570px;
+  margin-right: 580px;
   margin-bottom: 30px;
   padding: 10px;
   box-sizing: border-box;
@@ -573,8 +573,8 @@ svg{
   border-style: hidden;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
-  color: #6d4e3a;
 }
+
 
 .unirme-clas{
   font-size: 35px;
@@ -584,13 +584,11 @@ svg{
 }
 
 .HAHAHA7{
+  font-size: 1.2rem;
   text-align: center;
-  width: 300px;
-  height: 220px;
-  /* float: left; */
+  width: 320px;
+  height: 260px;
   margin: 2rem auto;
-  /* box-sizing: border-box; */
-  /* border: 5px solid #333; */
   background: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
@@ -605,13 +603,14 @@ svg{
   display: table-cell;
   position: absolute;
   top: 20%;
-  left: 15%;
+  left: 10%;
   -o-transform:translateY(-20%) ;
   -webkit-transform:translateY(-20%);
   -moz-transform:translateY(-20%) ;
   -ms-transform:translateY(-20%) ;
   transform:translateY(-20%) ;
   vertical-align: top;
+  
 }
 
 .HAHAHA7 .codi-clas-chido{
@@ -619,7 +618,7 @@ svg{
   padding: 0 1rem;
   display: table-cell;
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 15%;
   -o-transform:translateY(-50%) ;
   -webkit-transform:translateY(-50%);
@@ -628,6 +627,7 @@ svg{
   transform:translateY(-50%) ;
   vertical-align: middle;
   text-align: right;
+  color:#7195b8;
 }
 
 .HAHAHA7 .grado-unu{
@@ -635,7 +635,7 @@ svg{
   padding: 0 1rem;
   display: table-cell;
   position: absolute;
-  top: 64%;
+  top: 61%;
   left: 15%;
   -o-transform:translateY(-70%) ;
   -webkit-transform:translateY(-70%);
@@ -643,6 +643,7 @@ svg{
   -ms-transform:translateY(-70%) ;
   transform:translateY(-70%) ;
   vertical-align: middle;
+  color:#7195b8;
 }
 
 
@@ -660,6 +661,7 @@ svg{
   -ms-transform:translateY(-90%) ;
   transform:translateY(-90%) ;
   vertical-align: middle;
+  color:#7195b8;
 }
 
 /* nueva_clase */
