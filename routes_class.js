@@ -1,5 +1,5 @@
 const express = require("express");
-const session = require("express-session")
+const session = require("express-session");
 const Cloudant = require ("@cloudant/cloudant");
 
 const router = express.Router();
@@ -21,15 +21,96 @@ router.get("/",(req,res)=>{
 
 //-------------------- Informacion de la clase --------------------
 router.get("/info",(req,res)=>{
-    res.render("clase/info",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school});
+    res.render("clase/info",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school, usertype: req.session.user_type});
 });
+
+//-------------------- Editar Informacion de la clase --------------------
+router.get("/edit_clase",(req,res)=>{
+    if(req.session.user_type == "maestro"){
+        res.render("clase/edit_info",{classname: req.session.class_classname, description: req.session.class_description, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school});
+    }else if(req.session.user_type == "alumno"){
+        res.redirect("/app/clase");
+    }
+});
+
+//-------------------- Editando Informacion de la clase --------------------
+router.post("/clase_edited",(req,res)=>{
+    if(req.session.user_type == "maestro"){
+        cloudant_ep();
+        async function cloudant_ep(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+                console.log("Obteniendo DB");
+                const db = cloudant.db.use("piku_clases");
+                let user="";
+                user= await db.get(req.session.user_classcode);
+                console.log("DB Obtenida");
+                doc_ed = user;
+
+                doc_ed["_rev"]=user._rev
+                if(req.body.classname == ""){
+                    doc_ed.classname = req.session.class_classname;
+                }else if(req.body.classname !== ""){
+                    doc_ed.classname = req.body.classname;
+                }
+                if(req.body.description == ""){
+                    doc_ed.description = req.session.class_description;
+                }else if(req.body.description == " "){
+                    doc_ed.description = ""
+                }else if(req.body.description !== ""){
+                    doc_ed.description = req.body.description;
+                }
+                if(req.body.grade == ""){
+                    doc_ed.grade = req.session.class_grade;
+                }else if(req.body.grade !== ""){
+                    doc_ed.grade = req.body.grade;
+                }
+                if(req.body.group == ""){
+                    doc_ed.group = req.session.class_group;
+                }else if(req.body.group !== ""){
+                    doc_ed.group = req.body.group;
+                }
+                if(req.body.turn == ""){
+                    doc_ed.turn = req.session.class_turn;
+                }else if(req.body.turn !== ""){
+                    doc_ed.turn = req.body.turn;
+                }
+                if(req.body.school == ""){
+                    doc_ed.school = req.session.class_school;
+                }else if(req.body.school !== ""){
+                    doc_ed.school = req.body.school;
+                }
+
+                user = await db.insert(doc_ed);
+                console.log("Documento editado: ")
+                console.log(user);
+
+                res.redirect("/app/clase/info");
+            }catch(err){
+                console.log(err);
+                res.redirect("/app");
+            }
+        }
+    }else if(req.session.user_type == "alumno"){
+        res.redirect("/app/clase");
+    }
+});
+
 
 //-------------------- Materias --------------------
 router.get("/subject/:nc",(req,res)=>{
     var ns = req.url.split("/");
     ns = ns[2];
     var sub_name = eval("req.session.subject_name"+""+ns+"");
-    var sub_post = eval("posts: req.session.subject_post"+""+ns+"");
     if(sub_name == ""){
         res.redirect("/app/clase")
     }else if(sub_name !== ""){

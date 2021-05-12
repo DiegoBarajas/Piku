@@ -436,14 +436,16 @@ header{
   text-align: center;
   padding-top: 50px;
   color:#E67A86;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .HAHAHA4{
   text-align: center;
   width: 540px;
-  height: 220px;
+  height: 320px;
   float: right;
   margin-top:20px;
-  margin-right: 400px;
   margin-bottom: 30px;
   padding: 50px;
   box-sizing: border-box;
@@ -451,6 +453,9 @@ header{
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .unir-clas{
@@ -546,7 +551,6 @@ svg{
   height: 220px;
   float: right;
   margin-top:20px;
-  margin-right: 400px;
   margin-bottom: 30px;
   padding: 50px;
   box-sizing: border-box;
@@ -554,6 +558,9 @@ svg{
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
@@ -563,7 +570,6 @@ svg{
   height: 70px;
   float: right;
   margin-top:5px;
-  margin-right: 580px;
   margin-bottom: 30px;
   padding: 10px;
   box-sizing: border-box;
@@ -573,6 +579,15 @@ svg{
   border-style: hidden;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.crear-class{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
