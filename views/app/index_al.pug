@@ -22,24 +22,18 @@ block contenido
                a(href="/app/myuser", class="Mi_usuario") Mi Usuario
    div
       h1(class="hola-bienve") Hola #{name}, ¡Bienvenid@! 
-   -if(classcode == null){
-      from(class="HAHAHA4")
-      h3(class="unir-clas") ¡Unete a una clase!
-      form(action="/app/entrar_clase",method="POST")
    div(class="Ojo")
-    from(class="HAHAHA4")
+   from(class="HAHAHA4")
       div(class="imggg")
        -if(classcode == null){
         h3(class="unir-clas") ¡Unete a una clase!
-         form(action="/app/entrar_clase",method="POST")
+        form(action="/app/entrar_clase",method="POST")
          div(class="cod-clas")
             label(for="cod") Codigo de clase: 
             input(type="number", name="cod", placeholder="Codigo de clase", id="cod", required)
             input(type="submit", value="Unirme a la clase")
    -}else if(classcode !== null){
       div(class="HAHAHA7")
-      -}else if(classcode !== null){
-      div(class="info-clas")
          h2 #[a(href="/app/clase") #{classname}]
          p(class="codi-clas-chido") #[b Codigo de clase:] #{classcode}
          p(class="grado-unu") #[b Grado:] #{grade} || #[b Grupo:] #{group}
