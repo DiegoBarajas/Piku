@@ -26,7 +26,7 @@ block contenido
          div 
             input(type="submit", value="Unirme a la clase")
    -}else if(classcode !== null){
-      div
+      div(class="info-clas")
          h2 #[a(href="/app/clase") #{classname}]
          p #[b Codigo de clase:] #{classcode}
          p #[b Grado:] #{grade} || #[b Grupo:] #{group}
