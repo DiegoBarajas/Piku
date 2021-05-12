@@ -16,8 +16,8 @@ block contenido
                a(href="/app/myuser", class="Mi_usuario") Mi Usuario
    div
       h1(class="hola-bienve") Hola #{name}, ¡Bienvenid@! 
-   from(class="HAHAHA4")
-    -if(classcode == null){
+   -if(classcode == null){
+      from(class="HAHAHA4")
       h3(class="unir-clas") ¡Unete a una clase!
       form(action="/app/entrar_clase",method="POST")
          div(class="cod-clas")
@@ -26,9 +26,9 @@ block contenido
          div 
             input(type="submit", value="Unirme a la clase")
    -}else if(classcode !== null){
-      div(class="info-clas")
+      div(class="HAHAHA7")
          h2 #[a(href="/app/clase") #{classname}]
-         p #[b Codigo de clase:] #{classcode}
-         p #[b Grado:] #{grade} || #[b Grupo:] #{group}
-         p #[b Escuela:] #{school}
+         p(class="codi-clas-chido") #[b Codigo de clase:] #{classcode}
+         p(class="grado-unu") #[b Grado:] #{grade} || #[b Grupo:] #{group}
+         p(class="escuela-xd") #[b Escuela:] #{school}
    -}
