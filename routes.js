@@ -481,7 +481,7 @@ router.post("/user_edited",(req,res)=>{
 //-------------------- Eliminar DB de clase--------------------
 router.get("/delete_clase",(req,res)=>{
     if(req.session.user_type == "maestro"){
-        loudant_dc();
+        cloudant_dc();
         async function cloudant_dc(){
             try {
                 console.log("Creando conexion con base de datos....");
