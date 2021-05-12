@@ -28,7 +28,6 @@ router.get("/",(req,res)=>{
 
             console.log("Obteniendo documento de las Base de datos");
             r5 = await db.get(req.session.user_classcode);
-            console.log(r5.classcode);
             
             if(req.session.user_type == "alumno"){
                 res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school});

@@ -6,7 +6,7 @@ block contenido
           button(type="button", class="button_info")
              svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16")
                 path(d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z")
-             a(href="/app/clase") Volver
+             a(href="/app/clase/info") Volver
             
           button(type="button", class="button_S")
              svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16")
@@ -19,19 +19,47 @@ block contenido
                 path(d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z")
                 path(fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z")
              a(href="/app/myuser", class="Mi_usuario") Mi usuario
+    h1 Editar informacion de la clase: #{classname}
+    form(action="/app/clase/clase_edited",method="POST")
+        div
+            p #[b Actual nombre de la clase:] #{classname}
+            label(for="classname") #[b Nuevo Nombre para la clase: ]
+            input(type="text", name="classname", placeholder="Nuevo nombre", id="classname") 
 
-    body
-        p #[b Nombre de clase: ]#{classname}
-        p #[b Codgio de clase: ]#{classcode}
         -if(description == ""){
+            div
+                label(for="description") #[b Agregar descripcion : ]
+                input(type="text", name="description", placeholder="Agragar descripcion", id="description") 
         -}else if(description !== ""){
-            p #[b Descripcion: ]#{description}
+            div
+                p #[b Actual descripcion:] #{description}
+                p #[b Nota: ] Para quitar la descripcion solo pon un espacio
+                label(for="description") #[b Nueva descripcion : ]
+                input(type="text", name="description", placeholder="Nueva descripcion", id="description") 
         -}
-        p #[b Grado: ]#{grade}
-        p #[b Grupo: ]#{group}
-        p #[b Turno: ]#{turn}
-        p #[b Escuela: ]#{school}
-        -if(usertype == "alumno"){
-        -}else if(usertype == "maestro"){
-            a(href="/app/clase/edit_clase") Editar indormacion de la clase
-        -}
+
+        div
+            p #[b Actual grado:] #{grade}
+            label(for="grade") #[b Nuevo grado: ]
+            input(type="number", name="grade", placeholder="Nuevo grado", id="grade") 
+
+        div
+            p #[b Actual grupo:] #{group}
+            label(for="group") #[b Nuevo grupo: ] 
+            input(type="text", name="group", placeholder="Nuevo grupo", id="group")
+
+        div
+            p #[b Actual turno:] #{turn}
+            label(for="turn") #[b Nuevo turno: ]
+            input(type="text", name="turn", placeholder="Nuevo turno", id="turn")
+        
+        div
+            p #[b Actual escuela:] #{school}
+            label(for="school") #[b Nueva escuela : ]
+            input(type="text", name="school", placeholder="Nueva escuela", id="school")
+        
+        div 
+            input(type="submit", value="Editar informacion")
+
+    a(href="/app/clase/edit_clase") Cancelar 
+    
