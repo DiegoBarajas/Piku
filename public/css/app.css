@@ -60,7 +60,11 @@
 .img{
     width: 400px;
     height: 400px;
+    display:block;
+    margin:auto;
+    padding: 8px 1px 10px 10px;
     border-radius: 50%;
+    
 }
 
 body{
@@ -76,15 +80,14 @@ a{
   text-align: center;
   width: 740px;
   height: 480px;
+  float: right;
+  margin-right: 300px;
   padding: 50px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 video{
@@ -129,12 +132,12 @@ div.corr_num {
 } 
  /* Fondo blanquito */
 .HAHAHA{
-    text-align: left;
+    text-align: center;
     width: 540px;
     height: 340px;
     float: right;
     margin-right: 200px;
-    padding: 50px;
+    padding: 70px;
     box-sizing: border-box;
     border: 5px solid #333;
     background-color: whitesmoke; 
@@ -385,10 +388,10 @@ div.corr_num {
 header{
   background-color: #F2D474;
   width: 100%;
-  height: 45px;
+  height: 80px;
 	padding: 0px;
-	text-decoration: none; 
-	font-size: 15px; 
+	text-decoration: none;
+	font-size: 15px;
 }
 
 .button_S{
@@ -526,7 +529,6 @@ header{
 }
 /* index_mt */
 svg{
-  color: #E67A86;
   display: inline-block;
   color:#6d4e3a;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -575,6 +577,25 @@ svg{
   margin-bottom: 15px;
 }
 
+.HAHAHA7{
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  float: left;
+  margin-left: 20PX;
+  margin-top:20px;
+  margin-bottom: 30px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: whitesmoke; 
+  border-radius: 50px;
+  border-style: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+
+
 /* nueva_clase */
 
 /* .nuev-clas{
@@ -598,10 +619,6 @@ svg{
   border-radius: 50px;
   border-style: hidden;
 }
-
-/* .clases{
-
-} */
 
 .clase{
   font-size: 20px;
