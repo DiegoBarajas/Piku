@@ -159,7 +159,7 @@ div.corr_num {
 
   div.crear-c{
         text-align: center;
-        width: 150px;
+        width: 170px;
         height: 60px;
         box-sizing:content-box;
         margin: auto;
@@ -172,11 +172,12 @@ div.corr_num {
         display: inline-block;
         color: azure;
         margin-right: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }  
 
   div.volver-i{
     text-align: center;
-    width: 150px;
+    width: 170px;
     height: 60px;
     box-sizing:content-box;
     margin: auto;
@@ -188,6 +189,7 @@ div.corr_num {
     border-style: hidden;
     display: inline-block;
     color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 } 
 /* Tambien esta en login.mt.pug */
   .img-login-al{
