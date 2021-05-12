@@ -582,21 +582,81 @@ svg{
 .HAHAHA7{
   text-align: center;
   width: 300px;
-  height: 300px;
-  float: left;
-  margin-left: 20PX;
-  margin-top:20px;
-  margin-bottom: 30px;
-  padding: 30px;
-  box-sizing: border-box;
-  border: 5px solid #333;
-  background-color: whitesmoke; 
+  height: 220px;
+  /* float: left; */
+  margin: 2rem auto;
+  /* box-sizing: border-box; */
+  /* border: 5px solid #333; */
+  background: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
+  position: relative;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
+.HAHAHA7 h2{
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0 1rem;
+  display: table-cell;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  -o-transform:translateY(-20%) ;
+  -webkit-transform:translateY(-20%);
+  -moz-transform:translateY(-20%) ;
+  -ms-transform:translateY(-20%) ;
+  transform:translateY(-20%) ;
+  vertical-align: top;
+}
 
+.HAHAHA7 .codi-clas-chido{
+  margin: 0;
+  padding: 0 1rem;
+  display: table-cell;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  -o-transform:translateY(-50%) ;
+  -webkit-transform:translateY(-50%);
+  -moz-transform:translateY(-50%) ;
+  -ms-transform:translateY(-50%) ;
+  transform:translateY(-50%) ;
+  vertical-align: middle;
+  text-align: right;
+}
+
+.HAHAHA7 .grado-unu{
+  margin: 0;
+  padding: 0 1rem;
+  display: table-cell;
+  position: absolute;
+  top: 64%;
+  left: 15%;
+  -o-transform:translateY(-70%) ;
+  -webkit-transform:translateY(-70%);
+  -moz-transform:translateY(-70%) ;
+  -ms-transform:translateY(-70%) ;
+  transform:translateY(-70%) ;
+  vertical-align: middle;
+}
+
+
+
+.HAHAHA7 .escuela-xd{
+  margin: 0;
+  padding: 0 1rem;
+  display: table-cell;
+  position: absolute;
+  top: 77%;
+  left: 15%;
+  -o-transform:translateY(-90%) ;
+  -webkit-transform:translateY(-90%);
+  -moz-transform:translateY(-90%) ;
+  -ms-transform:translateY(-90%) ;
+  transform:translateY(-90%) ;
+  vertical-align: middle;
+}
 
 /* nueva_clase */
 
@@ -620,8 +680,4 @@ svg{
   background-color: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
-}
-
-.clase{
-  font-size: 20px;
 }
