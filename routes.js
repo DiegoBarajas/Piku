@@ -445,7 +445,8 @@ router.post("/user_edited",(req,res)=>{
 
 //-------------------- Eliminar DB de clase--------------------
 router.get("/delete_clase",(req,res)=>{
-    cloudant_dc();
+    if(req.session.user_type == "maestro"){
+        loudant_dc();
         async function cloudant_dc(){
             try {
                 console.log("Creando conexion con base de datos....");
@@ -472,6 +473,9 @@ router.get("/delete_clase",(req,res)=>{
                 res.redirect("/app");
             } 
         }
+    }else if(req.session.user_type == "alumno"){
+        res.redirect("/app");
+    }
 });
 
 
