@@ -443,6 +443,38 @@ router.post("/user_edited",(req,res)=>{
     }
 });
 
+//-------------------- Eliminar DB de clase--------------------
+router.get("/delete_clase",(req,res)=>{
+    cloudant_dc();
+        async function cloudant_dc(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+
+                const db = cloudant.db.use("piku_clases");
+
+                console.log("Obteniendo documento de las Base de datos");
+                r1 = await db.destroy(req.session.class_id, req.session.class_rev);
+                console.log(r1);
+                console.log("Documento eliminado");
+                    
+                res.redirect("/app");
+            }catch(err){
+                console.log(err);
+                res.redirect("/app");
+            } 
+        }
+});
+
+
 
 router.use("/clase", clases_middleware);
 router.use("/clase", router_class);

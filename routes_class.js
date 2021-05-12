@@ -105,6 +105,48 @@ router.post("/clase_edited",(req,res)=>{
     }
 });
 
+//-------------------- Confirmacion de eliminar clase --------------------
+router.get("/del_confirm",(req,res)=>{
+    res.render("clase/del_confirm");
+});
+
+//-------------------- Eliminar clase de user--------------------
+router.get("/del_class",(req,res)=>{
+    cloudant_ecs();
+    async function cloudant_ecs(){
+        try {
+            console.log("Creando conexion con base de datos....");
+            const cloudant = Cloudant({
+                url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                plugins:{
+                    iamauth:{
+                        iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                    }
+                }
+            });
+            console.log("Conexion creada");
+
+            const db = cloudant.db.use("piku_users");
+            console.log("Obteniendo documento de las Base de datos");
+            r = await db.get(req.session.user_id);
+            console.log(r);
+
+            doc_ed = r;
+            doc_ed["_rev"]=r._rev
+            doc_ed.classcode = null;
+            r = await db.insert(doc_ed);
+            console.log("Documento editado: ")
+            console.log(r);
+            
+            res.redirect("/app/delete_clase");
+
+        }catch(err){
+            console.log("Error: " + err);
+            res.redirect("/app");
+        }
+    }
+});
+
 
 //-------------------- Materias --------------------
 router.get("/subject/:nc",(req,res)=>{
