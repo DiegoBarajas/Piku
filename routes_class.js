@@ -1,7 +1,7 @@
 const express = require("express");
 const session = require("express-session");
 const Cloudant = require ("@cloudant/cloudant");
-
+const router_subject = require("./routes_subject")
 const router = express.Router();
 
 router.use(session({
@@ -227,19 +227,6 @@ router.get("/salir_class",(req,res)=>{
     }
 });
 
-
-//-------------------- Materias --------------------
-router.get("/subject/:nc",(req,res)=>{
-    var ns = req.url.split("/");
-    ns = ns[2];
-    var sub_name = eval("req.session.subject_name"+""+ns+"");
-    if(sub_name == ""){
-        res.redirect("/app/clase")
-    }else if(sub_name !== ""){
-        res.render("clase/subject",{subject_name: sub_name});
-    }
-});
-
-//------------------------------------------------------------
+router.use("/subject",router_subject);
 
 module.exports = router;
