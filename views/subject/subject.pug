@@ -29,6 +29,8 @@ block contenido
    -for(var i = 0; i < posts.rows.length; i++){
       h3=posts.rows[i].doc.post_name
       p=posts.rows[i].doc.content
-   -} 
-   a(href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
-   
+   -}
+   -if(user_type == "alumno"){
+   -}else if(user_type == "maestro"){
+      a(href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
+   -}
