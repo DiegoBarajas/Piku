@@ -828,3 +828,42 @@ svg{
   color:#7195b8;
   background: whitesmoke; 
 }
+/* user_un */
+.img-piku-inco{
+  width: 400px;
+  height: 400px;
+  margin-left: 500px;
+}
+
+.usua-no-encon{
+  font-size: 40px;
+  padding-top: 5px;
+  padding-left: 510px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #D079FC;
+}
+
+.verifica{
+  font-size: 25px;
+  padding-top: 5px;
+  padding-left: 420px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color:#8994d3;
+}
+
+.volver-ini-a{
+    text-align: center;
+    width: 150px;
+    height: 60px;
+    box-sizing:content-box;
+    margin-left: 630px;
+    margin-top: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    border: 5px solid #333;
+    background-color: #F2D474; 
+    border-radius: 50px;
+    border-style: hidden;
+    display: inline-block;
+    color:#6d4e3a;
+}
