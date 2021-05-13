@@ -792,6 +792,7 @@ svg{
   font-size: 30px;
   padding-top: 10px;
   padding-left: 30px;
+  margin-bottom: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 }
@@ -801,7 +802,7 @@ svg{
   padding: 0 1rem;
   display: table-cell;
   position:absolute;
-  top: 30%;
+  top: 40%;
   left: 5%;
   -o-transform:translateY(-30%) ;
   -webkit-transform:translateY(-30%);
@@ -811,7 +812,19 @@ svg{
   vertical-align: middle;
   color:#7195b8;
   background: whitesmoke; 
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 50px;
+  border-style: hidden;
+}
 
+.clase{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 35px;
+  color:#606eb1;
+  padding-left: 200px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .HAHAHA9{
@@ -821,14 +834,18 @@ svg{
   position:absolute;
   top: 88%;
   left: 50%;
-  -o-transform:translateY(-90%) ;
-  -webkit-transform:translateY(-90%);
-  -moz-transform:translateY(-90%) ;
-  -ms-transform:translateY(-90%) ;
-  transform:translateY(-90%) ;
+  -o-transform:translateY(-30%) ;
+  -webkit-transform:translateY(-30%);
+  -moz-transform:translateY(-30%) ;
+  -ms-transform:translateY(-30%) ;
+  transform:translateY(-30%) ;
   vertical-align: middle;
   color:#7195b8;
   background: whitesmoke; 
+  font-size: 20px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  border-radius: 50px;
+  border-style: hidden;
 }
 /* user_un */
 .img-piku-inco{
