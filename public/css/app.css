@@ -397,12 +397,9 @@ header{
   display: flex;
   justify-items: space-between;
 }
-/* .contenedor{
-  display: flex;
-} */
 .button_S{
-    background-color: #F2D474;
-    border: none;
+   background-color: #F2D474;
+   border: none;
    display: inline-flex;
    justify-content: center;
    align-items: center;
