@@ -750,24 +750,45 @@ svg{
 
 /* nueva_clase */
 
-/* .nuev-clas{
-  font-size: 40px;
+.nueva-clase{
+  font-size: 30px;
+  padding-top: 10px;
+  padding-left: 30px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  color: #D079FC;
-  margin-left: 30px;
-  padding-top: 20px;
-} */
 
-.requisi-nu-cla{
-  text-align: center;
-  width: 540px;
-  height: 340px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-  box-sizing: border-box;
-  border: 5px solid #333;
-  background-color: whitesmoke; 
-  border-radius: 50px;
-  border-style: hidden;
+}
+
+.HAHAHA8{
+  margin: 0;
+  padding: 0 1rem;
+  display: table-cell;
+  position:absolute;
+  top: 30%;
+  left: 5%;
+  -o-transform:translateY(-30%) ;
+  -webkit-transform:translateY(-30%);
+  -moz-transform:translateY(-30%) ;
+  -ms-transform:translateY(-30%) ;
+  transform:translateY(-30%) ;
+  vertical-align: middle;
+  color:#7195b8;
+  background: whitesmoke; 
+
+}
+
+.HAHAHA9{
+  margin: 0;
+  padding: 0 1rem;
+  display: table-cell;
+  position:absolute;
+  top: 88%;
+  left: 50%;
+  -o-transform:translateY(-90%) ;
+  -webkit-transform:translateY(-90%);
+  -moz-transform:translateY(-90%) ;
+  -ms-transform:translateY(-90%) ;
+  transform:translateY(-90%) ;
+  vertical-align: middle;
+  color:#7195b8;
+  background: whitesmoke; 
 }
