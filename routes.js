@@ -513,7 +513,9 @@ router.get("/delete_clase",(req,res)=>{
     }
 });
 
-
+router.get("/avatar",(req,res)=>{
+    res.send("Avatar mamahuevo")
+});
 
 router.use("/clase", clases_middleware);
 router.use("/clase", router_class);
