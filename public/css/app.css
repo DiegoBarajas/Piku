@@ -672,12 +672,15 @@ svg{
   text-align: center;
   width: 320px;
   height: 260px;
-  margin: 2rem auto;
+  float: right;
   background: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
   position: relative;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .HAHAHA7 h2{
