@@ -361,7 +361,6 @@ div.corr_num {
 .corrnum-titu{
   font-size: 40px;
   color: #D079FC;
-  padding-left: 300px;
   padding-top: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -369,7 +368,6 @@ div.corr_num {
 .inten-nue{
   font-size: 25px;
   color: #7195b8;
-  padding-left: 380px;
   padding-top: 10px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -380,7 +378,6 @@ div.corr_num {
   width: 150px;
   height: 60px;
   box-sizing:content-box;
-  margin-left: 610px;
   margin-top: 10px;
   padding: 20px;
   box-sizing: border-box;
@@ -390,6 +387,7 @@ div.corr_num {
   border-style: hidden;
   display: inline-block;
   color:#6d4e3a;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 
@@ -502,7 +500,13 @@ header{
 .img-inco{
   width: 400px;
   height: 400px;
-  margin-left: 15px;
+}
+
+.ya-regis{
+  text-align: center;
+  width: 1000px;
+  height: 200px;
+  background-color: none;
 }
 
 .ups{
@@ -582,8 +586,6 @@ header{
 .img-new-user-mt{
   width: 400px;
   height: 400px;
-  margin-left: 500px;
-
 }
 .maes-crea-co{
   font-size: 40px;
