@@ -209,36 +209,34 @@ router.post("/nueva_clase",(req,res)=>{
                             var JSON_p = {
                                 "_id": classcode,
                                 "subject1": {
-                                    "subject1": {
-                                        "posts": null
-                                    },
-                                    "subject2": {
-                                        "posts": null
-                                    },
-                                    "subject3": {
-                                        "posts": null
-                                    },
-                                    "subject4": {
-                                        "posts": null
-                                    },
-                                    "subject5": {
-                                        "posts": null
-                                    },
-                                    "subject6": {
-                                        "posts": null
-                                    },
-                                    "subject7": {
-                                        "posts": null
-                                    },
-                                    "subject8": {
-                                        "posts": null
-                                    },
-                                    "subject9": {
-                                        "posts": null
-                                    },
-                                    "subject10": {
-                                        "posts": null
-                                    }
+                                    "posts": null
+                                },
+                                "subject2": {
+                                    "posts": null
+                                },
+                                "subject3": {
+                                    "posts": null
+                                },
+                                "subject4": {
+                                    "posts": null
+                                },
+                                "subject5": {
+                                    "posts": null
+                                },
+                                "subject6": {
+                                    "posts": null
+                                },
+                                "subject7": {
+                                    "posts": null
+                                },
+                                "subject8": {
+                                    "posts": null
+                                },
+                                "subject9": {
+                                    "posts": null
+                                },
+                                "subject10": {
+                                    "posts": null
                                 }
                             }
 
@@ -373,36 +371,34 @@ router.post("/nueva_clase",(req,res)=>{
                                     var JSON_p = {
                                         "_id": classcode,
                                         "subject1": {
-                                            "subject1": {
-                                                "posts": null
-                                            },
-                                            "subject2": {
-                                                "posts": null
-                                            },
-                                            "subject3": {
-                                                "posts": null
-                                            },
-                                            "subject4": {
-                                                "posts": null
-                                            },
-                                            "subject5": {
-                                                "posts": null
-                                            },
-                                            "subject6": {
-                                                "posts": null
-                                            },
-                                            "subject7": {
-                                                "posts": null
-                                            },
-                                            "subject8": {
-                                                "posts": null
-                                            },
-                                            "subject9": {
-                                                "posts": null
-                                            },
-                                            "subject10": {
-                                                "posts": null
-                                            }
+                                            "posts": null
+                                        },
+                                        "subject2": {
+                                            "posts": null
+                                        },
+                                        "subject3": {
+                                            "posts": null
+                                        },
+                                        "subject4": {
+                                            "posts": null
+                                        },
+                                        "subject5": {
+                                            "posts": null
+                                        },
+                                        "subject6": {
+                                            "posts": null
+                                        },
+                                        "subject7": {
+                                            "posts": null
+                                        },
+                                        "subject8": {
+                                            "posts": null
+                                        },
+                                        "subject9": {
+                                            "posts": null
+                                        },
+                                        "subject10": {
+                                            "posts": null
                                         }
                                     }
 
