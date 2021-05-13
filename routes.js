@@ -34,12 +34,47 @@ router.get("/",(req,res)=>{
             }else if(req.session.user_type == "maestro"){
                 res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school});
             }
-
         }catch(err){
-            if(req.session.user_type == "alumno"){
-                res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
-            }else if(req.session.user_type == "maestro"){
-                res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+            if(req.session.user_classcode == null){ 
+                if(req.session.user_type == "alumno"){
+                    res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+                }else if(req.session.user_type == "maestro"){
+                    res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+                }
+            }else if(req.session.user_classcode !== null){
+                cloudant_z();
+                async function cloudant_z(){
+                    try {
+                        console.log("Creando conexion con base de datos....");
+                        const cloudant = Cloudant({
+                            url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                            plugins:{
+                                iamauth:{
+                                    iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                                }
+                            }
+                        });
+                        console.log("Conexion creada");
+
+                        const db = cloudant.db.use("piku_users");
+                        console.log("Obteniendo documento de las Base de datos");
+                        r = await db.get(req.session.user_id);
+                        console.log(r);
+
+                        doc_ed = r;
+                        doc_ed["_rev"]=r._rev
+                        doc_ed.classcode = null;
+                        r = await db.insert(doc_ed);
+                        console.log("Documento editado: ")
+                        console.log(r);
+                        
+                        res.redirect("/app");
+
+                    }catch(err){
+                        console.log("Error: " + err);
+                        res.redirect("/app");
+                    }
+                }
             }
         } 
     }
@@ -442,6 +477,42 @@ router.post("/user_edited",(req,res)=>{
         }
     }
 });
+
+//-------------------- Eliminar DB de clase--------------------
+router.get("/delete_clase",(req,res)=>{
+    if(req.session.user_type == "maestro"){
+        cloudant_dc();
+        async function cloudant_dc(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+
+                const db = cloudant.db.use("piku_clases");
+
+                console.log("Obteniendo documento de las Base de datos");
+                r1 = await db.destroy(req.session.class_id, req.session.class_rev);
+                console.log(r1);
+                console.log("Documento eliminado");
+                    
+                res.redirect("/app");
+            }catch(err){
+                console.log(err);
+                res.redirect("/app");
+            } 
+        }
+    }else if(req.session.user_type == "alumno"){
+        res.redirect("/app");
+    }
+});
+
 
 
 router.use("/clase", clases_middleware);

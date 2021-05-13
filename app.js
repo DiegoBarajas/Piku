@@ -221,6 +221,7 @@ app.get("/logout",(req,res)=>{
     req.session.user_classcode = undefined;
     req.session.user_pikoins = undefined;
     req.session.user_password = undefined;
+    req.session.user_rev = undefined;
 //----------CLass-----------
     req.session.class_id = undefined;
     req.session.class_classname = undefined;

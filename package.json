@@ -1,6 +1,6 @@
 {
   "name": "piku",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "",
   "main": "app.js",
   "dependencies": {
@@ -20,7 +20,7 @@
     "type": "git",
     "url": "git+https://github.com/DiegoBarajas/Piku_App.git"
   },
-  "author": "Perla Alatorre, Diego Barajas, Nefertari Garcia, Armando Guzma, y Lizeth Velazquez",
+  "author": "Equipo 1 Call For Code",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/DiegoBarajas/Piku_App/issues"

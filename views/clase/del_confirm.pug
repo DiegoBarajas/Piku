@@ -6,7 +6,7 @@ block contenido
           button(type="button", class="button_info")
              svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-left-square-fill" viewBox="0 0 16 16")
                 path(d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z")
-             a(href="/app/clase") Volver
+             a(href="/app/clase/info") Cancelar
             
           button(type="button", class="button_S")
              svg(xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-box-arrow-in-right" viewBox="0 0 16 16")
@@ -25,23 +25,11 @@ block contenido
                 path(d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z")
                 path(fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z")
              a(href="/app/myuser", class="Mi_usuario") Mi usuario
-
-    body
-        p #[b Nombre de clase: ]#{classname}
-        p #[b Codgio de clase: ]#{classcode}
-        -if(description == ""){
-        -}else if(description !== ""){
-            p #[b Descripcion: ]#{description}
-        -}
-        p #[b Grado: ]#{grade}
-        p #[b Grupo: ]#{group}
-        p #[b Turno: ]#{turn}
-        p #[b Escuela: ]#{school}
-        -if(usertype == "alumno"){
-        -}else if(usertype == "maestro"){
-         div
-            a(href="/app/clase/edit_clase") Editar informacion de la clase
-         div
-            a(href="/app/clase/del_confirm") Eliminar clase
-        -}
-        a(href="/app/clase/salir_class") Salir de la clase 
+    h2 ¿Estas seguro que quieres borrar la clase?
+    p #[big Esta accion es irreversible y perderas todo el contenido.]
+    div 
+        form(action="/app/clase/del_class")
+            input(type="submit", value="Eliminar")
+    div 
+        form(action="/app/clase/info")
+            input(type="submit", value="Cancelar")

@@ -28,6 +28,7 @@ module.exports = (req,res,next)=>{
                 req.session.class_group = r.group;
                 req.session.class_turn = r.turn;
                 req.session.class_school = r.school;
+                req.session.class_rev = r._rev;
                 //Nombre de la materia
                 req.session.subject_name1 = r.subject1.subject_name;
                 req.session.subject_name2 = r.subject2.subject_name;

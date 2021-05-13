@@ -30,6 +30,7 @@ module.exports = (req,res,next)=>{
                     req.session.user_classcode = user.classcode;
                     req.session.user_pikoins = user.pikoins;
                     req.session.user_password = user.password;
+                    req.session.user_rev = user._rev;
                 next();
             }catch(err){
                 console.log(err);
