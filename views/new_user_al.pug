@@ -1,8 +1,10 @@
 extend ./layout.pug 
 block contenido
-    h1 Alumno creado correctamente
-    h3 Inicia sesión, porfavor. 
-    div 
+    div(img-new-user)
+        img(class="img-new-user-mt" src="../public/resources/icono-piku.png", alt="Piku feliz")
+    h1(class="maes-crea-co") Alumno creado correctamente
+    h3(class="inicia-sesion") Inicia sesión, porfavor. 
+    div(class="ini-sesion-pofis") 
         a(href="/login_al") Iniciar Sesión 
-    div 
+    div(class="volver-inicio")  
         a(href="/") Volver al menú   

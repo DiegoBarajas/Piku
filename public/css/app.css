@@ -481,6 +481,7 @@ header{
 .img-inco{
   width: 400px;
   height: 400px;
+  margin-left: 15px;
 }
 
 .ups{
@@ -538,6 +539,74 @@ header{
   border-style: hidden;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+/* new_user_mt y al */
+.img-new-user{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-new-user-mt{
+  width: 400px;
+  height: 400px;
+  margin-left: 500px;
+
+}
+.maes-crea-co{
+  font-size: 40px;
+  color: #D079FC;
+  padding-left: 440px;
+  padding-top: 5px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.inicia-sesion{
+    font-size: 25px;
+    color: #7195b8;
+    padding-left: 580px;
+    padding-top: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.ini-sesion-pofis{
+  text-align: center;
+        width: 170px;
+        height: 60px;
+        box-sizing:content-box;
+        margin: auto;
+        padding: 20px;
+        box-sizing: border-box;
+        border: 5px solid #333;
+        background-color: #F2D474; 
+        border-radius: 50px;
+        border-style: hidden;
+        display: inline-block;
+        color: azure;
+        margin-right: 20px;
+        margin-left: 520px;
+        margin-top: 9px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.volver-inicio{
+  text-align: center;
+  width: 170px;
+  height: 60px;
+  box-sizing:content-box;
+  margin: auto;
+  padding: 20px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: #F2D474; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: inline-block;
+  color: azure;
+  margin-top: 9px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 /* index_mt */
 svg{
   display: inline-block;
@@ -571,7 +640,7 @@ svg{
   float: right;
   margin-top:5px;
   margin-bottom: 30px;
-  padding: 10px;
+  padding: 2px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color:#ffa0f2; 
