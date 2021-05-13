@@ -113,6 +113,9 @@ video{
     font-size: 30px;
     color:#E67A86 ;
     margin: 50px 0 20px 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .titulo_login_al, .titulo_login_mt{
@@ -120,8 +123,8 @@ video{
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    float: right;
-    margin-right: 350px;
+    /* float: right;
+    margin-right: 350px; */
 }
 
 div.corr_num {
@@ -517,6 +520,16 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.Ojo2{
+  display: grid;
+  justify-content: start;
+  align-items: start;
+}
+.Ojo3{
+  display: grid;
+  justify-content: end;
+  align-items: end;
 }
 
 .intenta-de-nu{
