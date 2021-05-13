@@ -192,7 +192,69 @@ router.post("/nueva_clase",(req,res)=>{
                         r = await db.insert(doc_ed);
                         console.log("Documento editado")
                         
-                        res.redirect("/app");
+                        cloudant_01();
+                        async function cloudant_01(){
+                            try {
+                                console.log("Creando conexion con base de datos....");
+                                const cloudant = Cloudant({
+                                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                                    plugins:{
+                                        iamauth:{
+                                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                                        }
+                                    }
+                                });
+                            console.log("Conexion creada");
+
+                            var JSON_p = {
+                                "_id": classcode,
+                                "subject1": {
+                                    "subject1": {
+                                        "posts": null
+                                    },
+                                    "subject2": {
+                                        "posts": null
+                                    },
+                                    "subject3": {
+                                        "posts": null
+                                    },
+                                    "subject4": {
+                                        "posts": null
+                                    },
+                                    "subject5": {
+                                        "posts": null
+                                    },
+                                    "subject6": {
+                                        "posts": null
+                                    },
+                                    "subject7": {
+                                        "posts": null
+                                    },
+                                    "subject8": {
+                                        "posts": null
+                                    },
+                                    "subject9": {
+                                        "posts": null
+                                    },
+                                    "subject10": {
+                                        "posts": null
+                                    }
+                                }
+                            }
+
+                            const db = cloudant.db.use("piku_posts");
+                            const doc_al = JSON_p;
+
+                            let pop="";
+                            pop = await db.insert(doc_al);
+                            console.log("Agregado a DB");
+                            
+                            res.redirect("/app")
+                            }catch(err){
+                                console.log(err);
+                                res.redirect("/app")
+                            }
+                        }
                     }catch(err){
                         console.log(err);
                         res.send("Ha ocurrdo un error, intenta de nuevo por favor");
@@ -294,7 +356,69 @@ router.post("/nueva_clase",(req,res)=>{
                                 r = await db.insert(doc_ed);
                                 console.log("Documento editado")
                         
-                                res.redirect("/app");
+                                cloudant_01();
+                                async function cloudant_01(){
+                                    try {
+                                        console.log("Creando conexion con base de datos....");
+                                        const cloudant = Cloudant({
+                                            url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                                            plugins:{
+                                                iamauth:{
+                                                    iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                                                }
+                                            }
+                                        });
+                                    console.log("Conexion creada");
+
+                                    var JSON_p = {
+                                        "_id": classcode,
+                                        "subject1": {
+                                            "subject1": {
+                                                "posts": null
+                                            },
+                                            "subject2": {
+                                                "posts": null
+                                            },
+                                            "subject3": {
+                                                "posts": null
+                                            },
+                                            "subject4": {
+                                                "posts": null
+                                            },
+                                            "subject5": {
+                                                "posts": null
+                                            },
+                                            "subject6": {
+                                                "posts": null
+                                            },
+                                            "subject7": {
+                                                "posts": null
+                                            },
+                                            "subject8": {
+                                                "posts": null
+                                            },
+                                            "subject9": {
+                                                "posts": null
+                                            },
+                                            "subject10": {
+                                                "posts": null
+                                            }
+                                        }
+                                    }
+
+                                    const db = cloudant.db.use("piku_posts");
+                                    const doc_al = JSON_p;
+
+                                    let pop="";
+                                    pop = await db.insert(doc_al);
+                                    console.log("Agregado a DB");
+                                    
+                                    res.redirect("/app")
+                                    }catch(err){
+                                        console.log(err);
+                                        res.redirect("/app")
+                                    }
+                                }
                             }catch(err){
                                 console.log(err);
                                 res.send("Ha ocurrdo un error, intenta de nuevo por favor");
