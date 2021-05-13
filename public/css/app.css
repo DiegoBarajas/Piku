@@ -394,29 +394,43 @@ header{
 	padding: 5px;
 	text-decoration: none;
 	font-size: 15px;
+  display: flex;
+  justify-items: space-between;
 }
-
 .button_S{
-    margin-right: 323px;
-    background-color: #F2D474;
-    border: none;
+   background-color: #F2D474;
+   border: none;
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
 }
 .Crear_Clase{
     margin-right: 323px;
 }
 .button_M_U{
-    margin-right: 0px;
     background-color: #F2D474;
     border: none;
+    float: right;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .button_Mi{
-    margin-right: 322px;
     background-color: #F2D474;
     border: none;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 .button_info{
   background-color: #F2D474;
-    border: none;
+  border: none;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 .block{
     width: 240px;
@@ -609,9 +623,10 @@ header{
 
 /* index_mt */
 svg{
-  display: inline-block;
+  display: flex;
   color:#6d4e3a;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  float: right;
 }
 
 .HAHAHA5{
@@ -672,12 +687,15 @@ svg{
   text-align: center;
   width: 320px;
   height: 260px;
-  margin: 2rem auto;
+  float: right;
   background: whitesmoke; 
   border-radius: 50px;
   border-style: hidden;
   position: relative;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .HAHAHA7 h2{
