@@ -75,6 +75,7 @@ app.post("/new_user",(req,res)=>{
                     "email" :req.body.email,
                     "birthday": req.body.birthday,
                     "classcode":null, 
+                    "avatar":"default",
                     "pikoins":0
                 });
                 console.log("Documento Creado en piku_users");
@@ -111,6 +112,7 @@ app.post("/new_user",(req,res)=>{
                     "password":req.body.password,
                     "birthday": req.body.birthday,
                     "classcode":null, 
+                    "avatar":"default",
                     "pikoins":0
                 });
                 console.log("Documento Creado en piku_users");
@@ -156,6 +158,7 @@ app.post("/user_al",(req,res)=>{
                 req.session.user_birthday = user.birthday;
                 req.session.user_classcode = user.classcode;
                 req.session.user_pikoins = user.pikoins;
+                req.session.user_avatar = user.avatar;
                 if(user.usertype == "alumno"){
                     res.redirect("/app");
                 }else if(user.usertype == "maestro"){
@@ -200,6 +203,7 @@ app.post("/user_mt",(req,res)=>{
                     req.session.user_classcode = user.classcode;
                     req.session.user_pikoins = user.pikoins;
                     req.session.user_password = user.password;
+                    req.session.user_avatar = user.avatar;
 
                     res.redirect("/app");
                 }else if(req.body.password !== user.password){
@@ -221,6 +225,7 @@ app.get("/logout",(req,res)=>{
     req.session.user_classcode = undefined;
     req.session.user_pikoins = undefined;
     req.session.user_password = undefined;
+    req.session.user_avatar = undefined;
     req.session.user_rev = undefined;
 //----------CLass-----------
     req.session.class_id = undefined;
