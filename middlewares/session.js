@@ -31,6 +31,7 @@ module.exports = (req,res,next)=>{
                     req.session.user_pikoins = user.pikoins;
                     req.session.user_password = user.password;
                     req.session.user_rev = user._rev;
+                    req.session.user_avatar = user.avatar;
                 next();
             }catch(err){
                 console.log(err);
