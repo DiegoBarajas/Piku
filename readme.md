@@ -1,3 +1,5 @@
+PARA CORRER LA PAGINA ES NECESARIO TENER NODE.JS INSTALADO.
+
 Para iniciar la pagina se deben instalar las dependencias, se debe abrir la consola y verificar estar en la carpeta:
 $Piku_App
 

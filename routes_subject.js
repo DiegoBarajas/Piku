@@ -10,7 +10,31 @@ router.get("/:nc",(req,res)=>{
     if(sub_name == ""){
         res.redirect("/app/clase")
     }else if(sub_name !== ""){
-        res.render("subject/subject",{subject_name: sub_name, ns: ns});
+        cloudant_rpd();
+        async function cloudant_rpd(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+
+                const db = cloudant.db.use("piku_posts");
+                
+                console.log("Obteniendo documento de las Base de datos");
+                posts = await db.partitionedList(""+req.session.class_id+""+"subject"+""+ns+"", {include_docs: true});
+                
+                res.render("subject/subject",{subject_name: sub_name, ns: ns, post: posts});
+            }catch(err){
+                console.log(err);
+                res.render("subject/subject",{subject_name: sub_name, ns: ns});
+            }
+        }
     }
 });
 
@@ -68,6 +92,7 @@ router.post("/:nc/create_post",(req,res)=>{
 
         }catch(err){
             console.log(err);
+            res.redirect("/app");
         }
     }
 
