@@ -123,8 +123,7 @@ video{
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    /* float: right;
-    margin-right: 350px; */
+    float: inline-end;
 }
 
 div.corr_num {
@@ -138,8 +137,8 @@ div.corr_num {
     text-align: center;
     width: 540px;
     height: 340px;
+    margin-left: 150px;
     float: right;
-    margin-right: 200px;
     padding: 70px;
     box-sizing: border-box;
     border: 5px solid #333;
@@ -198,11 +197,8 @@ div.corr_num {
   .img-login-al{
     width: 450px;
     height: 450px; 
-    float: left;
-    margin-left: 60px;
-    margin-top: 30px;
-    margin-bottom: 30px;
     clip-path: circle();
+    display: flex;
   }
 
  /* login.mt.pug */
@@ -516,21 +512,22 @@ header{
   margin-top: 5px;
 }
 
+.flex-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .Ojo{
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .Ojo2{
-  display: grid;
-  justify-content: start;
-  align-items: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.Ojo3{
-  display: grid;
-  justify-content: end;
-  align-items: end;
-}
+
 
 .intenta-de-nu{
   align-items: center;

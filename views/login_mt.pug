@@ -1,25 +1,25 @@
 extend ./layout.pug
 block contenido
     h1(class="inicio_mt") Iniciar Sesion 
-    div(class="Ojo")
-        h3(class="titulo_login_mt") Maestro
     div(class="Ojo2")
-     div(class="imgg", class="Ojo")
+        h3(class="titulo_login_mt") Maestro
+    div(class="flex-container")
+       div(class="imgg")
          img(class="img-login-al" src="../public/resources/Logo_piku.png", alt="Logo de piku")
-    div(class="Ojo")
-     form(action="/user_mt",method="POST" class="HAHAHA")
-        div(class="corr_num")
+       div(class="Ojo")
+         form(action="/user_mt",method="POST" class="HAHAHA")
+          div(class="corr_num")
             label(for="email") Correo o Número de Teléfono: 
             input(type="text", name="email", placeholder="Correo o Numero de Telefono", id="email", required)
         
-        div(class="contraseña") 
+          div(class="contraseña") 
             label(for="password") Contraseña: 
             input(type="password", name="password", placeholder="Contraseña", id="password", required)
 
-        div(class="in-sesi")  
+          div(class="in-sesi")  
             input(type="submit", value="Iniciar Sesión")
 
-        div(class="crear-c") 
-            a(href="/signup_mt") Crear una cuenta 
-        div(class="volver-i")  
-            a(href="/") Volver al inicio 
+          div(class="crear-c") 
+              a(href="/signup_mt") Crear una cuenta 
+          div(class="volver-i")  
+              a(href="/") Volver al inicio 
