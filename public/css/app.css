@@ -222,12 +222,14 @@ div.corr_num {
   }
   
   h1.crea-cuen{
-    text-align:left;
+    /* text-align:left; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    display: inline-block;
     font-size: 30px;
     color:#E67A86 ;
     margin: 50px 0 20px 50px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
   h3.titu-signup{
@@ -235,8 +237,9 @@ div.corr_num {
     font-size: 70px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     text-align: center;
-    float: right;
-    margin-right: 350px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
   }
 
   div.nombre-signup{
@@ -282,7 +285,7 @@ div.corr_num {
   }
   div.volver-i-signup{
     text-align: center;
-    width: 150px;
+    width: 160px;
     height: 60px;
     box-sizing:content-box;
     margin: auto;
@@ -294,11 +297,12 @@ div.corr_num {
     border-style: hidden;
     display: inline-block;
     color: azure;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   div.tengo-cuent{
     text-align: center;
-    width: 150px;
+    width: 160px;
     height: 60px;
     box-sizing:content-box;
     margin: auto;
@@ -311,16 +315,16 @@ div.corr_num {
     display: inline-block;
     color: azure;
     margin-right: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   }
 
   .HAHAHA2{
     text-align: center;
-    width: 540px;
+    width: 550px;
     height: 570px;
-    float: right;
-    margin-right: 200px;
+    margin-left: 150px;
     margin-bottom: 50px;
-    padding: 70px;
+    padding: 50px;
     box-sizing: border-box;
     border: 5px solid #333;
     background-color: whitesmoke; 
@@ -328,13 +332,17 @@ div.corr_num {
     border-style: hidden;
 }
 /* signup_al.pug */
+.flex-container2{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .HAHAHA3{
     text-align: center;
-    width: 540px;
+    width: 600px;
     height: 460px;
-    float: right;
-    margin-right: 200px;
     margin-bottom: 50px;
+    margin-left: 150px;
     padding: 70px;
     box-sizing: border-box;
     border: 5px solid #333;

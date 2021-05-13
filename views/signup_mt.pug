@@ -1,11 +1,13 @@
 extend ./layout.pug
 block contenido  
     h1(class="crea-cuen") Crear Cuenta 
-    div
+    div(class="Ojo2")
         h3(class="titu-signup") Maestro
-    div
-     img(class="img-signup" src="../public/resources/Logo_piku.png", alt="Logo de piku")
-    form(action="/new_user",method="POST" class="HAHAHA2")
+    div(class="flex-container2")
+     div(class="imgg")
+       img(class="img-signup" src="../public/resources/Logo_piku.png", alt="Logo de piku")
+     div(class="Ojo")
+       form(action="/new_user",method="POST" class="HAHAHA2")
         div(class="nombre-signup")
             label(for="name") Nombre: 
             input(type="text", name="name", placeholder="Nombre", id="name", required) 
