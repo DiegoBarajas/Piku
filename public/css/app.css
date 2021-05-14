@@ -1330,22 +1330,29 @@ svg{
 
 /* info.pug */
 
-.valval {
-  text-align: center;
-  width: 940px;
-  height: 620px;
-  float: center;
-  margin:20px 0 30px 200px;
-  padding: 50px;
-  box-sizing: border-box;
-  border: 5px solid #333;
-  background-color: whitesmoke;
-  color: #57493c; 
-  border-radius: 50px;
-  border-style: hidden;
-  display: flex;
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
+.valval{
+margin: 0;
+padding: 0 5rem;
+display: table-cell;
+position:absolute;
+top: 40%;
+left: 30%;
+width: 500px;
+height:350px ;
+text-align: center;
+-o-transform:translateY(-30%) ;
+-webkit-transform:translateY(-30%);
+-moz-transform:translateY(-30%) ;
+-ms-transform:translateY(-30%) ;
+transform:translateY(-30%) ;
+vertical-align: middle;
+color: #a16238;
+background: whitesmoke; 
+font-size: 20px;
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+border-radius: 50px;
+border-style: hidden;}
+
 /* myuser */
 
 .block{
