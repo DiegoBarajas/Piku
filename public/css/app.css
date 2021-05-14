@@ -977,13 +977,15 @@ margin-bottom: 5px;
     border-style: hidden;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-
+.flex-containerr{
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 50px;
+  align-items: center;
+}
 .avatar1 {
   width:300px;
   height:300px ;
-  padding-left:30px ;
-  padding-top:20px ;
-  padding-bottom:50px ;
 
 }
 
