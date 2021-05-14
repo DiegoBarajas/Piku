@@ -33,6 +33,11 @@ block contenido
                 a(href="/app/myuser", class="Mi_usuario") Mi usuario
    h1(class="subject") #{subject_name}
    h3(class="publica") Publicaciones:
+   -if(user_type == "alumno"){
+   -}else if(user_type == "maestro"){
+      a(class="crear-publi")(href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
+   -}
+   a(href="/app/clase" class="volver") Volver 
    -for(var i = 0; i < posts.rows.length; i++){
       .yellow.border.tr.large-padding 
          .row 
@@ -43,9 +48,3 @@ block contenido
                   a(class="editar" href="/app/clase/subject/"+posts.rows[i].doc._id+"/edit") Editar 
                -}
    -}
-   -if(user_type == "alumno"){
-   -}else if(user_type == "maestro"){
-      a(class="crear-publi")(href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
-   -}
-   div
-      a(href="/app/clase" class="volver") Volver 
