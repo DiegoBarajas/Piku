@@ -826,6 +826,13 @@ svg{
   color:#7195b8;
 }
 
+.avatar-mt{
+  float: right;
+  width: 600px;
+  height:600px ;
+  padding-bottom: 60px;
+}
+
 /* nueva_clase */
 
 .nueva-clase{
@@ -937,9 +944,9 @@ margin-bottom: 5px;
 .avatar1 {
   width:300px;
   height:300px ;
-  /* padding-right: ;
-  padding-top: ;
-  padding-bottom: ; */
+  padding-left:30px ;
+  padding-top:20px ;
+  padding-bottom:50px ;
 
 }
 
