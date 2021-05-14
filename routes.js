@@ -30,16 +30,16 @@ router.get("/",(req,res)=>{
             r5 = await db.get(req.session.user_classcode);
             
             if(req.session.user_type == "alumno"){
-                res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school});
+                res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school, avatar: req.session.user_avatar});
             }else if(req.session.user_type == "maestro"){
-                res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school});
+                res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, classname: r5.classname, grade: r5.grade, group: r5.group, school: r5.school, avatar: req.session.user_avatar});
             }
         }catch(err){
             if(req.session.user_classcode == null){ 
                 if(req.session.user_type == "alumno"){
-                    res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+                    res.render("app/index_al",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, avatar: req.session.user_avatar});
                 }else if(req.session.user_type == "maestro"){
-                    res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode});
+                    res.render("app/index_mt",{name: req.session.user_name, lastname: req.session.user_lastname, email: req.session.user_id, birthday: req.session.user_birthday, pikoins: req.session.user_pikoins, classcode: req.session.user_classcode, avatar: req.session.user_avatar});
                 }
             }else if(req.session.user_classcode !== null){
                 cloudant_z();
@@ -513,8 +513,48 @@ router.get("/delete_clase",(req,res)=>{
     }
 });
 
+//---------------- Ver Avatar --------------------------------
 router.get("/avatar",(req,res)=>{
-    res.send("Avatar mamahuevo")
+    res.render("app/avatar",{avatar: req.session.user_avatar});
+});
+
+//------------------- Actualizar Avatar ---------------------
+router.get("/act_avatar/:avatar",(req,res)=>{
+    ava = req.url.split("/")
+    ava = ava[2].split("?");
+    ava = ava[0]
+    cloudant();
+    async function cloudant(){
+        try {
+            console.log("Creando conexion con base de datos....");
+            const cloudant = Cloudant({
+                url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                plugins:{
+                    iamauth:{
+                        iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                    }
+                }
+            });
+            console.log("Conexion creada");
+
+            const db = cloudant.db.use("piku_users");
+            console.log("Obteniendo documento de las Base de datos");
+            x = await db.get(req.session.user_id);
+            console.log(x);
+
+            doc_ed = x;
+            doc_ed["_rev"]=x._rev
+            doc_ed.avatar = ava;
+            x = await db.insert(doc_ed);
+            console.log("Documento editado: ")
+            console.log(x);     
+
+            res.redirect("/app");
+        }catch(err){
+            console.log(err);
+            res.redirect("/app");
+        }
+    }
 });
 
 router.use("/clase", clases_middleware);

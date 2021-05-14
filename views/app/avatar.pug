@@ -1,6 +1,6 @@
 extend ../layout.pug
-block contenido 
-   header 
+block contenido
+    header 
       nav(class="contenedor")
         div 
           button(type="button", class="button_info")
@@ -25,23 +25,23 @@ block contenido
                 path(d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z")
                 path(fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z")
              a(href="/app/myuser", class="Mi_usuario") Mi usuario
-
     
-   h1 #{classname}
-   -if(description == ""){
-   -}else if(description !== ""){
-      p #[b Descripcion: ] #{description}
-   -}
-   h3 #[a(href="/app/clase/subject/1") #{materia1}]
-   h3 #[a(href="/app/clase/subject/2") #{materia2}]
-   h3 #[a(href="/app/clase/subject/3") #{materia3}]
-   h3 #[a(href="/app/clase/subject/4") #{materia4}]
-   h3 #[a(href="/app/clase/subject/5") #{materia5}]
-   h3 #[a(href="/app/clase/subject/6") #{materia6}]
-   h3 #[a(href="/app/clase/subject/7") #{materia7}]
-   h3 #[a(href="/app/clase/subject/8") #{materia8}]
-   h3 #[a(href="/app/clase/subject/9") #{materia9}]
-   h3 #[a(href="/app/clase/subject/10") #{materia10}]
-   a(href="/app") Volver 
+    div 
+        img(src="../public/resources/avatar_1.png", alt="Imagen no encontrada")
+        form(action="/app/act_avatar/avatar_1", method="GET")
+            input(type="submit", value="Usar este avatar")
+    
+    div 
+        img(src="../public/resources/avatar_2.png", alt="Imagen no encontrada")
+        form(action="/app/act_avatar/avatar_2", method="GET")
+            input(type="submit", value="Usar este avatar")
+    
+    div 
+        img(src="../public/resources/avatar_3.png", alt="Imagen no encontrada")
+        form(action="/app/act_avatar/avatar_3", method="GET")
+            input(type="submit", value="Usar este avatar")
 
-   img(src="../public/resources/"+""+avatar+""+".png", alt="Imagen no encontrada")
+    div 
+        img(src="../public/resources/avatar_default.png", alt="Imagen no encontrada")
+        form(action="/app/act_avatar/avatar_default", method="GET")
+            input(type="submit", value="Usar este avatar")
