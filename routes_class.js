@@ -16,9 +16,9 @@ router.get("/",(req,res)=>{
     //si encentra la clase va a mostrar a la clase
     if(req.session.class_classname || req.session.class_grade || req.session.class_group){
         res.render("clase/index",{classcode: req.session.class_id, description: req.session.class_description, classname:req.session.class_classname, grade: req.session.class_grade, group: req.session.class_group, turn: req.session.class_turn, school: req.session.class_school, materia1: req.session.subject_name1, materia2: req.session.subject_name2, materia3: req.session.subject_name3, materia4: req.session.subject_name4, materia5: req.session.subject_name5, materia6: req.session.subject_name6, materia7: req.session.subject_name7, materia8: req.session.subject_name8, materia9: req.session.subject_name9, materia10: req.session.subject_name10, avatar: req.session.user_avatar});
-    //Si no lo encuentra no va a mostrar clase
+    //Si no lo encuentra va a redireccionar a app
     }else if(!req.session.class_classname || req.session.class_grade || req.session.class_group){
-        res.send("Esa clase no existe");
+        res.redirect("/app");
     }
 });
 
