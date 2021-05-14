@@ -104,4 +104,12 @@ router.post("/:nc/create_post",(req,res)=>{
         res.redirect("/app/clase");
     }
 });
+
+//----------------- Editar posts ----------------------
+router.get("/:nc/edit",(req,res)=>{
+    var ns = req.url.split("/");
+    ns = ns[1];
+    res.send(ns)
+});
+
 module.exports = router;
