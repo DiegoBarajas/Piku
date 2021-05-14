@@ -907,6 +907,7 @@ border-radius: 5px;
   align-items: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   color: #D079FC;
+  padding-top: 50px;
 }
 .descri{
   display: flex;
@@ -1452,11 +1453,11 @@ border-radius: 50px;
 
 .crear-publi{
   text-align: center;
-  width: 120px;
-  height: 50px;
+  width: 150px;
+  height: 30px;
   box-sizing:content-box;
-  margin-left: 75px;
-  padding: 8px;
+  margin-left: 70px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color: #F2D474; 
@@ -1465,15 +1466,14 @@ border-radius: 50px;
   display: inline-block;
   color: azure;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding-left:15px ;
 }
 
 .volver{
   text-align: center;
-  width: 120px;
-  height: 50px;
-  margin-left: 5px;
-  padding: 8px;
+  width: 100px;
+  height: 30px;
+  margin-left: 10px;
+  margin-bottom: 20px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color: #F2D474; 
@@ -1481,7 +1481,6 @@ border-radius: 50px;
   border-style: hidden;
   display: inline-block;
   color: azure;
-  margin-bottom: 50px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
