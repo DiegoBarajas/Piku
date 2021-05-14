@@ -2,6 +2,10 @@ const express = require("express");
 const router = express.Router();
 const Cloudant = require ("@cloudant/cloudant");
 
+router.use(express.json())
+router.use(express.urlencoded({extended: true}));
+
+
 //-------------------- Materias --------------------
 router.get("/:nc",(req,res)=>{
     var ns = req.url.split("/");
