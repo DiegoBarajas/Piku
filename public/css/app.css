@@ -9,7 +9,7 @@
 .inicio{
     text-align: center;
     font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
-    color: #ffffff;
+    color: #E67A86;
     line-height: 200px;
     font-size: 50px;
     display: flex;
@@ -18,9 +18,7 @@
 }
 
 
-.text{
-    text-align: center;
-}
+
   .button1{
     margin: 50px 50px; 
     padding: 25px 25px 25px 25px;
@@ -58,50 +56,46 @@
 }
 
 .img{
-    width: 400px;
-    height: 400px;
-    display: flex;
-    padding: 8px 1px 10px 10px;
+    width: 200px;
+    height: 200px;
+    display: flex; 
+    padding: 45px 1px 0px 10px; 
     border-radius: 50%;
-    
 }
 
 body{
-  background-color: #ECECEC;
+background-color: #ECECEC;
 }
 
 
 a{
-    text-decoration: none;
+text-decoration: none;
 }
 
 .HAHAHA0{
-  text-align: center;
-  width: 740px;
-  height: 480px;
-  padding: 50px;
-  box-sizing: border-box;
-  border: 5px solid #333;
-  background-color: whitesmoke; 
-  border-radius: 50px;
-  border-style: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    text-align: center;
+    width: 1200px;
+    height: 580px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #333;
+    background-color: whitesmoke; 
+    border-radius: 50px;
+    border-style: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 video{
-  position: fixed;
-
-  min-width: 100%;
-  min-height: 100%;
-
-  top: 50%;
-  left: 50%;
-
-  transform: translateX(-50%) translateY(-50%);
-
-  z-index: -1;
+position: fixed;
+min-width: 100%;
+min-height: 100%;
+top: 50%;
+left: 50%;
+transform: translateX(-50%) translateY(-50%);
+z-index: -1;
 } 
 
 /* login_al.pug y algunas de login_mt.pug */
@@ -437,17 +431,7 @@ header{
   justify-content: center;
   align-items: center;
 }
-.block{
-    width: 240px;
-    height: 340px;
-    margin-left: 1125px;
-    margin-right: 0;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 5px solid #333;
-    background-image: linear-gradient(to right,#FCAE79,#E67A86); 
 
-}
 
 .hola-bienve{
   font-size: 50px;
@@ -976,4 +960,163 @@ margin-bottom: 5px;
 
 .large-padding{
   padding: 10px 15px;
+}
+
+/* info.pug */
+
+.valval {
+  text-align: center;
+  width: 940px;
+  height: 620px;
+  float: center;
+  margin:20px 0 30px 200px;
+  padding: 50px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: whitesmoke;
+  color: #57493c; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: flex;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+/* myuser */
+
+.block{
+  text-align:  center;
+  width: 440px;
+  height: 440px;
+  margin-left: 450px;
+  margin-top: 80px;
+  padding: 20px;
+  box-sizing: border-box;
+  color: #290c1d;
+  background-color: #ffe07c;
+  border: 5px solid #957841;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 25px;
+  border-radius: 50px;
+}
+.edit{
+  color: #6d4e3a;
+}
+
+/* edit_user */
+
+.edit-info{
+  font-size: 50px;
+  padding-left:30px;
+  padding-top: 15px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #1f0916;
+}
+
+.edit-xd{
+  text-align:  center;
+width: 440px;
+height: 440px;
+margin-left: 450px;
+margin-top: 30px;
+padding: 20px;
+box-sizing: border-box;
+color: #290c1d;
+background-color: #ffe07c;
+border: 5px solid #957841;
+font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+font-size: 25px;
+border-radius: 50px;
+}
+
+.inputla{
+  color: #957841;
+  background-color: #fae6a4;
+}
+
+/* subjet.pug */
+.subject{
+  font-size: 55px;
+  color:#1f0916;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top:20px ;
+  padding-left:20px ;
+}
+
+.publica{
+  font-size: 40px;
+  color:#333;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top:20px ;
+  padding-left:20px ;
+}
+
+.nom-post{
+  font-size: 30px;
+  color:#57493c;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top:20px ;
+  padding-left:20px ;
+}
+
+.conte-post {
+  font-size: 20px;
+  color:#a16238;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-top:5px ;
+  padding-left:20px ;
+}
+
+.editar{
+  text-align: center;
+  width: 70px;
+  height: 40px;
+  box-sizing:content-box;
+  margin: auto;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: #F2D474; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: inline-block;
+  color: azure;
+  margin-top: 9px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left:20px ;
+}
+
+.crear-publi{
+  text-align: center;
+  width: 140px;
+  height: 55px;
+  box-sizing:content-box;
+  margin: auto;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: #F2D474; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: inline-block;
+  color: azure;
+  margin-top: 9px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-left:15px ;
+}
+
+.volver{
+  text-align: center;
+  width: 100px;
+  height: 40px;
+  box-sizing:content-box;
+  margin: auto;
+  padding: 8px;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color: #F2D474; 
+  border-radius: 50px;
+  border-style: hidden;
+  display: inline-block;
+  color: azure;
+  margin-top: 9px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }

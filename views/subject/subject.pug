@@ -25,21 +25,21 @@ block contenido
                 path(d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z")
                 path(fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z")
              a(href="/app/myuser", class="Mi_usuario") Mi usuario
-   h1 #{subject_name}
-   h3 Publicaciones:
+   h1(class="subject") #{subject_name}
+   h3(class="publica") Publicaciones:
    -for(var i = 0; i < posts.rows.length; i++){
       .yellow.border.tr.large-padding 
          .row 
-               h2=posts.rows[i].doc.post_name
-               p=posts.rows[i].doc.content
+               h2(class="nom-post")=posts.rows[i].doc.post_name
+               p(class="conte-post")=posts.rows[i].doc.content
                -if(user_type == "alumno"){
                -}else if(user_type == "maestro"){
-                  a(href="/app/clase/subject/"+posts.rows[i].doc._id+"/edit") Editar 
+                  a(class="editar" href="/app/clase/subject/"+posts.rows[i].doc._id+"/edit") Editar 
                -}
    -}
    -if(user_type == "alumno"){
    -}else if(user_type == "maestro"){
-      a(href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
+      a(class="crear-publi")(href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
    -}
    div
-      a(href="/app/clase") Volver 
+      a(href="/app/clase" class="volver") Volver 
