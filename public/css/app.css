@@ -953,3 +953,20 @@ margin-bottom: 5px;
   width:300px;
   height:300px ;
 }
+
+/* Para la separacion de los posts*/
+.yellow{
+  background-color: #F2D474;
+}
+
+.border{
+  border: solid 1px #E67A86;
+}
+
+.tr:nth-of-type(odd){
+  background-color: #eee;
+}
+
+.large-padding{
+  padding: 10px 15px;
+}

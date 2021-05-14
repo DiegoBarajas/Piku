@@ -28,8 +28,11 @@ block contenido
    h1 #{subject_name}
    h3 Publicaciones:
    -for(var i = 0; i < posts.rows.length; i++){
-      h3=posts.rows[i].doc.post_name
-      p=posts.rows[i].doc.content
+      .yellow.border.tr.large-padding 
+         .row 
+               h2=posts.rows[i].doc.post_name
+               p=posts.rows[i].doc.content
+               a(href="/app/clase/subject") Editar 
    -}
    -if(user_type == "alumno"){
    -}else if(user_type == "maestro"){
