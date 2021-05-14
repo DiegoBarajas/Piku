@@ -1307,19 +1307,19 @@ svg{
   background-color: #eee;
 }
 .yellow:hover{
-  background: black;
+  background:rgb(243, 243, 243);;
 }
 
 .border{
-  border: solid 1px #E67A86;
+  border: solid 1px #e4b868;
   margin-bottom: 5px;
 }
 
 .tr:nth-of-type(odd){
-  background-color: #f028be;
+  background-color: #e4b868;
 }
 .tr:nth-of-type(odd):hover{
-  background: #25e713;
+  background: #ecc46d;
   transition: all 0.3s linear;
   border-radius: 5px;
 }
@@ -1437,7 +1437,7 @@ border-radius: 50px;
   height: 40px;
   box-sizing:content-box;
   margin: auto;
-  padding: 10px;
+  padding: 9px;
   box-sizing: border-box;
   border: 5px solid #333;
   background-color: #F2D474; 
@@ -1452,8 +1452,8 @@ border-radius: 50px;
 
 .crear-publi{
   text-align: center;
-  width: 140px;
-  height: 55px;
+  width: 120px;
+  height: 50px;
   box-sizing:content-box;
   margin: auto;
   padding: 8px;
@@ -1475,6 +1475,7 @@ border-radius: 50px;
   height: 40px;
   box-sizing:content-box;
   margin: auto;
+  margin-bottom: 5px;
   padding: 8px;
   box-sizing: border-box;
   border: 5px solid #333;
@@ -1483,7 +1484,7 @@ border-radius: 50px;
   border-style: hidden;
   display: inline-block;
   color: azure;
-  margin-top: 9px;
+  margin-top: 15px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
