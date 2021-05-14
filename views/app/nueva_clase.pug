@@ -41,7 +41,7 @@ block contenido
           input(type="number", min="1", max="15", name="grade", placeholder="Grado", id="grade", required)
         div 
           label(for="group") Grupo:  
-          input(type="text", name="group", placeholder="Grupo", id="group", required)
+          input(type="text", name="group", minlength="1", maxlength="1"  placeholder="Grupo", id="group", required)
         div 
           label(for="turn") Turno: 
           input(type="text", name="turn", placeholder="Turno", id="turn", required) 

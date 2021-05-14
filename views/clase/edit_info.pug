@@ -58,7 +58,7 @@ block contenido
         div
             p #[b Actual grupo:] #{group}
             label(for="group") #[b Nuevo grupo: ] 
-            input(type="text", name="group", placeholder="Nuevo grupo", id="group")
+            input(type="text", name="group", maxlength="1", placeholder="Nuevo grupo", id="group")
 
         div
             p #[b Actual turno:] #{turn}
@@ -73,5 +73,5 @@ block contenido
         div 
             input(type="submit", value="Editar informacion")
 
-    a(href="/app/clase/edit_clase") Cancelar 
+    a(href="/app/clase/info") Cancelar 
     
