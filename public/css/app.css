@@ -7,14 +7,8 @@
     text-decoration:none;
 }
 .inicio{
-    text-align: center;
     font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
     color: #E67A86;
-    line-height: 200px;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
@@ -31,7 +25,7 @@
     font-weight: bold;
     color:#D079FC ;
     border-radius: 10%;
-    background: rgba(208, 121, 252 );
+    background: #F2D474;
 } 
 
 .button2{
@@ -46,27 +40,28 @@
     font-weight: bold;
     color:#D079FC ;
     border-radius: 10%;
-    background: rgba(208, 121, 252 );
+    background: #F2D474;
 } 
 
 .imggg{
-  display: flex;
+  /* display: flex; */
   justify-content: center;
   align-items: center;
-}
+} 
 
 .img{
     width: 200px;
     height: 200px;
-    display: flex; 
-    padding: 45px 1px 0px 10px; 
+    /* display: flex;  */
+    /* padding: 45px 1px 0px 10px;  */
     border-radius: 50%;
+    padding-top:50px ;
 }
 
-body{
-background-color: #ECECEC;
+.Ojo{
+  justify-content: center;
+  align-items: center;
 }
-
 
 a{
 text-decoration: none;
@@ -82,7 +77,7 @@ text-decoration: none;
     background-color: whitesmoke; 
     border-radius: 50px;
     border-style: hidden;
-    display: flex;
+    /* display: flex; */
     justify-content: center;
     align-items: center;
     margin-top: 20px;
@@ -565,11 +560,6 @@ border-radius: 5px;
   align-items: center;
 }
 .Ojo{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.Ojo2{
   display: flex;
   justify-content: center;
   align-items: center;
