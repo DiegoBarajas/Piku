@@ -1,3 +1,6 @@
+Este codigo contiene una pagina web, usa como backend node.js, usa express para facilitar la codificacion,
+el motor de visas Pug, usa IBM Cloudant como base de datos y Bootstrap para el diseño.
+
 PARA CORRER LA PAGINA ES NECESARIO TENER NODE.JS INSTALADO.
 
 Para iniciar la pagina se deben instalar las dependencias, se debe abrir la consola y verificar estar en la carpeta:
