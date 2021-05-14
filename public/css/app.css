@@ -640,6 +640,10 @@ border-radius: 5px;
     display: inline-block;
     color:#6d4e3a;
 }
+/* clase/index */
+.classname{
+  padding-top: 50px;
+}
 
 /* new_user_mt y al */
 .img-new-user{
@@ -855,8 +859,8 @@ svg{
 
 .avatar-mt{
   float: right;
-  width: 200px;
-  height:100px ;
+  width: 300px;
+  height:300px ;
   padding-bottom: 60px;
 }
 
@@ -938,10 +942,6 @@ svg{
   margin-bottom: 15px;
   padding-left: 140px;
 }
-.HAHAHA9 div {
-padding-left: 35px;
-margin-bottom: 5px;
-}
 
 .HAHAHA9 input {
   color: #d38929;
@@ -954,12 +954,11 @@ margin-bottom: 5px;
 
 .cancelar{
     text-align: center;
-    width: 140px;
-    height: 60px;
+    width: 150px;
     box-sizing:content-box;
     margin-top: 5px;
     margin-left: 170px;
-    padding: 18px; 
+    padding: 18px;
     box-sizing: border-box;
     border: 5px solid #333;
     background-color: #F2D474; 
@@ -1083,7 +1082,7 @@ border-radius: 50px;
   font-size: 55px;
   color:#1f0916;
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  padding-top:20px ;
+  padding-top:50px ;
   padding-left:20px ;
 }
 
