@@ -38,7 +38,7 @@ block contenido
           input(type="text", name="description", placeholder="Descripción de la clase" id="description")
         div 
           label(for="grade") Grado:  
-          input(type="number", name="grade", placeholder="Grado", id="grade", required)
+          input(type="number", min="1", max="15", name="grade", placeholder="Grado", id="grade", required)
         div 
           label(for="group") Grupo:  
           input(type="text", name="group", placeholder="Grupo", id="group", required)
