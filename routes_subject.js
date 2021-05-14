@@ -28,7 +28,6 @@ router.get("/:nc",(req,res)=>{
                 
                 console.log("Obteniendo documento de las Base de datos");
                 posts = await db.partitionedList(""+req.session.class_id+""+"subject"+""+ns+"", {include_docs: true});
-                
                 res.render("subject/subject",{subject_name: sub_name, ns: ns, post: posts, user_type: req.session.user_type});
             }catch(err){
                 console.log(err);
@@ -46,7 +45,6 @@ router.get("/:nc/new_post",(req,res)=>{
         var ns = req.url.split("/");
         ns = ns[1];
         var sub_name = eval("req.session.subject_name"+""+ns+"");
-        console.log(ns);
         res.render("subject/new_post",{sub_name: sub_name, ns: ns});
     }
 });
@@ -107,9 +105,87 @@ router.post("/:nc/create_post",(req,res)=>{
 
 //----------------- Editar posts ----------------------
 router.get("/:nc/edit",(req,res)=>{
-    var ns = req.url.split("/");
-    ns = ns[1];
-    res.send(ns)
+    if(req.session.user_type == "alumno"){
+        res.redirect("/app/clase");
+    }else if(req.session.user_type == "maestro"){
+        var idp = req.url.split("/");
+        idp = idp[1];
+        console.log(idp);cloudant();
+        async function cloudant(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+        
+                const db = cloudant.db.use("piku_posts");
+                
+                console.log("Obteniendo documento de las Base de datos");
+                xy = await db.get(idp);
+                res.render("subject/edit_post",{idp: idp, postname: xy.post_name, content: xy.content});
+            }catch(err){
+                console.log(err);
+                res.render("/app/clase");
+            } 
+        }
+    }
+});
+
+//------------------- Editar post en DB ---------------------
+router.post("/:nc/changing_post",(req,res)=>{
+    if(req.session.user_type == "alumno"){
+        res.redirect("/app/clase");
+    }else if(req.session.user_type == "maestro"){
+        var idp = req.url.split("/");
+        idp = idp[1];
+        cloudant_edps();
+        async function cloudant_edps(){
+            try {
+                console.log("Creando conexion con base de datos....");
+                const cloudant = Cloudant({
+                    url:"https://9f54e758-3ad6-4391-8439-003d07506891-bluemix.cloudantnosqldb.appdomain.cloud",
+                    plugins:{
+                        iamauth:{
+                            iamApiKey: "BXXfOZYJWpnnPykjZcJSJ8pOtuuADMw9M_mrxZ0IRum0"
+                        }
+                    }
+                });
+                console.log("Conexion creada");
+
+                const db = cloudant.db.use("piku_posts");
+                console.log("Obteniendo documento de las Base de datos");
+                rs = await db.get(idp);
+                console.log(rs);
+
+                doc_ed = rs;
+                doc_ed["_rev"]=rs._rev
+                if(req.body.post_name == ""){
+                    doc_ed.post_name = rs.post_name;
+                }else if(req.body.post_name !== ""){
+                    doc_ed.post_name = req.body.post_name;
+                }
+                if(req.body.content == ""){
+                    doc_ed.content = rs.content;
+                }else if(req.body.content !== ""){
+                    doc_ed.content = req.body.content;
+                }
+                rs = await db.insert(doc_ed);
+                console.log("Documento editado: ")
+                console.log(rs);
+                res.redirect("/app/clase");
+                
+            }catch(err){
+                console.log(err);
+                res.redirect("/app")
+            }
+        }
+    }
 });
 
 module.exports = router;
