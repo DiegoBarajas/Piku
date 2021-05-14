@@ -1000,15 +1000,16 @@ margin-bottom: 5px;
 
 /* Para la separacion de los posts*/
 .yellow{
-  background-color: #F2D474;
+  background-color: #eee;
 }
 
 .border{
   border: solid 1px #E67A86;
+  margin-bottom: 5px;
 }
 
 .tr:nth-of-type(odd){
-  background-color: #eee;
+  background-color: #d38929;
 }
 
 .large-padding{
