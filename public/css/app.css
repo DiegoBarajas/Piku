@@ -9,14 +9,16 @@
 .inicio{
     font-family:Helvetica,Futura,Arial,Verdana,sans-serif;
     color: #E67A86;
+    font-size: 60px;
+    margin-top:10px ;
 }
 
 
 
   .button1{
-    margin: 50px 50px; 
+    margin: 30px 30px; 
     padding: 25px 25px 25px 25px;
-    padding-top: 10px;
+    padding-top: 5px;
     width: 130px;
     height: 60px;
     text-align: center;
@@ -26,12 +28,13 @@
     color:#D079FC ;
     border-radius: 10%;
     background: #F2D474;
+    margin-left: 50px;
 } 
 
 .button2{
-    margin: 50px 50px; 
+    margin: 30px 30px; 
     padding: 25px 25px 25px 25px;
-    padding-top: 10px;
+    padding-top: 5px;
     width: 130px;
     height: 60px;
     text-align: center;
@@ -50,12 +53,12 @@
 } 
 
 .img{
-    width: 200px;
-    height: 200px;
+    width: 380px;
+    height: 380px;
     /* display: flex;  */
     /* padding: 45px 1px 0px 10px;  */
-    border-radius: 50%;
-    padding-top:50px ;
+    border-radius: 40%;
+    margin-top: 5px;  
 }
 
 .Ojo{
@@ -69,9 +72,9 @@ text-decoration: none;
 
 .HAHAHA0{
     text-align: center;
-    width: 600px;
-    height: 480px;
-    padding: 10px;
+    width: 780px;
+    height: 590px;
+    padding: 5px;
     box-sizing: border-box;
     border: 1px solid #333;
     background-color: whitesmoke; 
@@ -80,7 +83,7 @@ text-decoration: none;
     /* display: flex; */
     justify-content: center;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 video{
@@ -434,7 +437,7 @@ div.corr_num {
    align-items: center;
 }
 .button_S:hover{
-background: #E67A86;
+background: #e4b868;
 transition: all 0.4s linear;
 border-radius: 5px;
 }
@@ -449,7 +452,7 @@ border-radius: 5px;
     align-items: center;
 }
 .button_M_U:hover{
-  background: #E67A86;
+  background:#e4b868;
   transition: all 0.4s linear;
   border-radius: 5px;
 }
@@ -461,19 +464,19 @@ border-radius: 5px;
     align-items: center;
 }
 .button_Mi:hover{
-  background: #E67A86;
+  background: #e4b868;
   transition: all 0.4s linear;
   border-radius: 5px;
 }
 .button_info{
-  background-color: #F2D474;
+  background-color: #e4b868;
   border: none;
   display: inline-flex;
   justify-content: center;
   align-items: center;
 }
 .button_info:hover{
-  background: #E67A86;
+  background: #e4b868;
   transition: all 0.4s linear;
   border-radius: 5px;
 }
@@ -864,9 +867,8 @@ svg{
 
 .nueva-clase{
   font-size: 40px;
-  padding-top: 50px;
+  padding-top: 80px;
   padding-left: 45px;
-  /* margin-bottom: 15px; */
   color: rgb(90, 62, 47);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
@@ -912,7 +914,7 @@ svg{
   padding: 0 1rem;
   display: table-cell;
   position:absolute;
-  top: 60%;
+  top: 56%;
   left: 50%;
   width: 500px;
   height:650px ;
@@ -948,25 +950,30 @@ margin-bottom: 5px;
 }
 
 .crear-clase{
-  color: #9b6b4c;
-  margin-left: 30px;
+  background-color:#F2D474 ;
+  border: #F2D474;
+  width: 130px;
+  height: 30px;
+  border-radius: 50px;
+  border-style: hidden;
 }
 
 .cancelar{
     text-align: center;
-    width: 140px;
+    width: 50px;
     height: 60px;
+    margin-left: 60px;
     box-sizing:content-box;
-    margin-top: 5px;
-    margin-left: 170px;
-    padding: 18px; 
     box-sizing: border-box;
     border: 5px solid #333;
     background-color: #F2D474; 
+    color: #d38929;
     border-radius: 50px;
     border-style: hidden;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+
 .flex-containerr{
   display: flex;
   flex-wrap: wrap;
