@@ -75,7 +75,7 @@ app.post("/new_user",(req,res)=>{
                     "email" :req.body.email,
                     "birthday": req.body.birthday,
                     "classcode":null, 
-                    "avatar":"default",
+                    "avatar":"avatar_default",
                     "pikoins":0
                 });
                 console.log("Documento Creado en piku_users");
@@ -112,7 +112,7 @@ app.post("/new_user",(req,res)=>{
                     "password":req.body.password,
                     "birthday": req.body.birthday,
                     "classcode":null, 
-                    "avatar":"default",
+                    "avatar":"avatar_default",
                     "pikoins":0
                 });
                 console.log("Documento Creado en piku_users");
