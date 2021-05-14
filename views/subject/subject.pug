@@ -45,6 +45,12 @@ block contenido
                p(class="conte-post")=posts.rows[i].doc.content
                -if(user_type == "alumno"){
                -}else if(user_type == "maestro"){
-                  a(class="editar" href="/app/clase/subject/"+posts.rows[i].doc._id+"/edit") Editar 
+                  a(class="editar", href="/app/clase/subject/"+posts.rows[i].doc._id+"/edit") Editar 
                -}
    -}
+   -if(user_type == "alumno"){
+   -}else if(user_type == "maestro"){
+      a(class="crear-publi", href="/app/clase/subject/"+ns+"/new_post") Crear publicacion
+   -}
+   div
+      a(href="/app/clase" class="volver") Volver 
