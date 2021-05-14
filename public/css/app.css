@@ -866,6 +866,22 @@ svg{
   height:300px ;
   padding-bottom: 60px;
 }
+.Pizza{
+  text-align: center;
+  width: 140px;
+  height: 70px;
+  float: right;
+  box-sizing: border-box;
+  border: 5px solid #333;
+  background-color:#ffa0f2; 
+  border-radius: 50px;
+  border-style: hidden;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* nueva_clase */
 
