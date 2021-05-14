@@ -386,15 +386,50 @@ div.corr_num {
 
 
 /* index_al */
-header{
+.container{
+  width: 80%;
+  max-width: 1000px;
+ margin: 0 auto;
+}
+.header{
   background-color: #F2D474;
-  width: 100%;
-  height: 55px;
-	padding: 5px;
-	text-decoration: none;
-	font-size: 15px;
+  color: #6d4e3a;
   display: flex;
-  justify-items: space-between;
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+}
+.header a{
+  color: #6d4e3a;
+  text-decoration: none;
+}
+.Lo-nav-con{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.naviga{
+  display: flex;
+}
+.naviga,ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: inline-flex;
+}
+.naviga,ul,li{
+  display: inline-flex;
+}
+ .naviga,ul,li{
+  display: inline-flex;
+  padding: 0.2rem 1rem;
+}
+
+ .Pikulogo{
+  width: 100px;
+  height: 50px;
 }
 .button_S{
    background-color: #F2D474;
@@ -403,16 +438,25 @@ header{
    justify-content: center;
    align-items: center;
 }
+.button_S:hover{
+background: #E67A86;
+transition: all 0.4s linear;
+border-radius: 5px;
+}
 .Crear_Clase{
     margin-right: 323px;
 }
 .button_M_U{
     background-color: #F2D474;
     border: none;
-    float: right;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+.button_M_U:hover{
+  background: #E67A86;
+  transition: all 0.4s linear;
+  border-radius: 5px;
 }
 .button_Mi{
     background-color: #F2D474;
@@ -420,9 +464,11 @@ header{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+}
+.button_Mi:hover{
+  background: #E67A86;
+  transition: all 0.4s linear;
+  border-radius: 5px;
 }
 .button_info{
   background-color: #F2D474;
@@ -430,6 +476,11 @@ header{
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+.button_info:hover{
+  background: #E67A86;
+  transition: all 0.4s linear;
+  border-radius: 5px;
 }
 
 
@@ -671,7 +722,9 @@ svg{
   color:#6d4e3a;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   float: right;
+  cursor: pointer;
 }
+
 
 .HAHAHA5{
   text-align: center;
@@ -812,8 +865,8 @@ svg{
 
 .avatar-mt{
   float: right;
-  width: 600px;
-  height:600px ;
+  width: 200px;
+  height:200px ;
   padding-bottom: 60px;
 }
 
@@ -821,9 +874,9 @@ svg{
 
 .nueva-clase{
   font-size: 40px;
-  padding-top: 30px;
+  padding-top: 50px;
   padding-left: 45px;
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   color: rgb(90, 62, 47);
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
