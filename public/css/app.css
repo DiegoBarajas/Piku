@@ -1006,6 +1006,9 @@ svg{
 .yellow{
   background-color: #eee;
 }
+.yellow:hover{
+  background: black;
+}
 
 .border{
   border: solid 1px #E67A86;
@@ -1013,7 +1016,12 @@ svg{
 }
 
 .tr:nth-of-type(odd){
-  background-color: #d38929;
+  background-color: #f028be;
+}
+.tr:nth-of-type(odd):hover{
+  background: #25e713;
+  transition: all 0.3s linear;
+  border-radius: 5px;
 }
 
 .large-padding{
