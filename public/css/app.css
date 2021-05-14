@@ -69,8 +69,8 @@ text-decoration: none;
 
 .HAHAHA0{
     text-align: center;
-    width: 1200px;
-    height: 580px;
+    width: 600px;
+    height: 480px;
     padding: 10px;
     box-sizing: border-box;
     border: 1px solid #333;
@@ -856,7 +856,7 @@ svg{
 .avatar-mt{
   float: right;
   width: 200px;
-  height:200px ;
+  height:100px ;
   padding-bottom: 60px;
 }
 
