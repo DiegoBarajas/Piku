@@ -22,11 +22,11 @@ block contenido
 
         div(class="contraseña-signup")
             label(for="password") Contraseña: 
-            input(type="password", name="password", placeholder="Contraseña", id="password", required)
+            input(type="password", minlength="8", name="password", placeholder="Contraseña", id="password", required)
 
         div(class="contraseña-confir-signup")
             label(for="password_c") Confirmar contraseña: 
-            input(type="password", name="password_c", placeholder="Confirmar contraseña", id="password_c", required)
+            input(type="password", minlength="8", name="password_c", placeholder="Confirmar contraseña", id="password_c", required)
 
         div(class="fecha-naci-signup")
             label(for="birthday") Fecha de Nacimiento:  
