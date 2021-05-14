@@ -27,6 +27,9 @@ block contenido
              a(href="/app/myuser", class="Mi_usuario") Mi usuario
       
    from
+         img(class="avatar1" src="../public/resources/avatar_default.png", alt="Imagen no encontrada")
+         form(action="/app/act_avatar/avatar_default", method="GET")
+            input(type="submit", value="Usar este avatar")
        
          img(class="avatar1" src="../public/resources/avatar_1.png", alt="Imagen no encontrada")
          form(action="/app/act_avatar/avatar_1", method="GET")
