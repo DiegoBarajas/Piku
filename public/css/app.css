@@ -832,7 +832,7 @@ svg{
   padding: 0 1rem;
   display: table-cell;
   position:absolute;
-  top: 88%;
+  top: 70%;
   left: 50%;
   -o-transform:translateY(-30%) ;
   -webkit-transform:translateY(-30%);
@@ -846,6 +846,11 @@ svg{
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   border-radius: 50px;
   border-style: hidden;
+}
+
+.materias{
+  font-size: 35px;
+  color: #606eb1;
 }
 /* user_un */
 .img-piku-inco{
